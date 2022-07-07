@@ -3,7 +3,7 @@ coding: utf-8
 
 title: IETF and Energy - An Overview
 abbrev: energy-overview
-docname: draft-eckert-ietf-and-energy-overview
+docname: draft-eckert-ietf-and-energy-overview-02
 stream: independent
 category: info
 ipr: trust200902
@@ -160,6 +160,17 @@ informative:
     date: March 2017
     target: https://www.naspi.org/sites/default/files/reference_documents/tstf_electric_power_system_report_pnnl_26331_march_2017_0.pdf
 
+  BOUNDED_LATENCY:
+    title: "A calculus for network delay. I. Network elements in isolation"
+    author:
+       -
+         name:  R.L. Cruz
+    date: 1991
+    seriesinfo:
+      DOI:  10.1109/18.61109
+      "IEEE": "Transactions on Information Theory ( Volume: 37, Issue: 1)"
+    target: https://ieeexplore.ieee.org/document/61109
+
 --- abstract
 
 This memo provides an overview of work performed by or proposed within
@@ -301,7 +312,7 @@ therefore their own Time-Division-Multiplex (TDM) networks, both separate from s
 packet multiplexing. This technology was very expensive on a per-bit basis due to its cell-forwarding nature
 though.
 
-At the end of the 1980th, it was proven (TBD: need to find the reference, cedric knows..)
+At the end of the 1980th, it was proven in {{BOUNDED_LATENCY}}
 that variable length packet multiplexing in network can also support non-NP-hard calculations for
 bounded latency. This lead to the IETF "Integrated Services WG" (INTSERV) to support such guaranteed
 throughput and bounded latency traffic via {{RFC2212}} - and to the demise of ATM.

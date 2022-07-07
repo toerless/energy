@@ -10,7 +10,7 @@ Expires: 8 January 2023                                           Orange
 
 
                      IETF and Energy - An Overview
-                 draft-eckert-ietf-and-energy-overview
+                draft-eckert-ietf-and-energy-overview-02
 
 Abstract
 
@@ -338,12 +338,12 @@ Eckert & Boucadair       Expires 8 January 2023                 [Page 6]
 Internet-Draft               energy-overview                   July 2022
 
 
-   At the end of the 1980th, it was proven (TBD: need to find the
-   reference, cedric knows..) that variable length packet multiplexing
-   in network can also support non-NP-hard calculations for bounded
-   latency.  This lead to the IETF "Integrated Services WG" (INTSERV) to
-   support such guaranteed throughput and bounded latency traffic via
-   [RFC2212] - and to the demise of ATM.
+   At the end of the 1980th, it was proven in [BOUNDED_LATENCY] that
+   variable length packet multiplexing in network can also support non-
+   NP-hard calculations for bounded latency.  This lead to the IETF
+   "Integrated Services WG" (INTSERV) to support such guaranteed
+   throughput and bounded latency traffic via [RFC2212] - and to the
+   demise of ATM.
 
    IntServ has so far seen little traction because it too got
    superceeded as explained in the following section - for its original
@@ -1521,6 +1521,13 @@ Internet-Draft               energy-overview                   July 2022
 
 12.  Informative References
 
+   [BOUNDED_LATENCY]
+              Cruz, R.L., "A calculus for network delay. I. Network
+              elements in isolation", DOI 10.1109/18.61109,
+              IEEE Transactions on Information Theory ( Volume: 37,
+              Issue: 1), 1991,
+              <https://ieeexplore.ieee.org/document/61109>.
+
    [I-D.ajunior-energy-awareness-00]
               Junior, A. and R. C. Sofia, "Energy-awareness metrics
               global applicability guidelines", Work in Progress,
@@ -1556,19 +1563,19 @@ Internet-Draft               energy-overview                   July 2022
               <https://www.ietf.org/archive/id/draft-chakrabarti-
               nordmark-energy-aware-nd-02.txt>.
 
-   [I-D.claise-power-management-arch]
-              Claise, B., Parello, J., and B. Schoening, "Power
-              Management Architecture", Work in Progress, Internet-
-              Draft, draft-claise-power-management-arch-02, 22 October
-              2010, <https://www.ietf.org/archive/id/draft-claise-power-
-              management-arch-02.txt>.
-
 
 
 Eckert & Boucadair       Expires 8 January 2023                [Page 28]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [I-D.claise-power-management-arch]
+              Claise, B., Parello, J., and B. Schoening, "Power
+              Management Architecture", Work in Progress, Internet-
+              Draft, draft-claise-power-management-arch-02, 22 October
+              2010, <https://www.ietf.org/archive/id/draft-claise-power-
+              management-arch-02.txt>.
 
    [I-D.fossati-core-monitor-option]
               Fossati, T., Giacomin, P., and S. Loreto, "Monitor Option
@@ -1606,13 +1613,6 @@ Internet-Draft               energy-overview                   July 2022
               <https://www.ietf.org/archive/id/draft-ietf-dnssd-srp-
               13.txt>.
 
-   [I-D.jennings-energy-pricing]
-              Jennings, C. and B. Nordman, "Communication of Energy
-              Price Information", Work in Progress, Internet-Draft,
-              draft-jennings-energy-pricing-01, 10 July 2011,
-              <https://www.ietf.org/archive/id/draft-jennings-energy-
-              pricing-01.txt>.
-
 
 
 
@@ -1625,6 +1625,13 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 29]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [I-D.jennings-energy-pricing]
+              Jennings, C. and B. Nordman, "Communication of Energy
+              Price Information", Work in Progress, Internet-Draft,
+              draft-jennings-energy-pricing-01, 10 July 2011,
+              <https://www.ietf.org/archive/id/draft-jennings-energy-
+              pricing-01.txt>.
 
    [I-D.lhan-problems-requirements-satellite-net]
               Han, L., Li, R., Retana, A., Chen, M., Su, L., Jiang, T.,
@@ -1667,13 +1674,6 @@ Internet-Draft               energy-overview                   July 2022
    [I-D.petrescu-v6ops-ipv6-power-ipv4]
               Petrescu, A., Said, S. B. H., Philippot, O., and T.
               Vincent, "Power Consumption of IPv6 vs IPv4 in
-              Smartphone", Work in Progress, Internet-Draft, draft-
-              petrescu-v6ops-ipv6-power-ipv4-00, 13 March 2017,
-              <https://www.ietf.org/archive/id/draft-petrescu-v6ops-
-              ipv6-power-ipv4-00.txt>.
-
-
-
 
 
 
@@ -1681,6 +1681,11 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 30]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+              Smartphone", Work in Progress, Internet-Draft, draft-
+              petrescu-v6ops-ipv6-power-ipv4-00, 13 March 2017,
+              <https://www.ietf.org/archive/id/draft-petrescu-v6ops-
+              ipv6-power-ipv4-00.txt>.
 
    [I-D.rahman-core-sleepy]
               Rahman, A., "Enhanced Sleepy Node Support for CoAP", Work
@@ -1723,11 +1728,6 @@ Internet-Draft               energy-overview                   July 2022
               2012, <https://www.ietf.org/archive/id/draft-vial-core-
               mirror-proxy-01.txt>.
 
-   [I-D.vial-core-mirror-server]
-              Vial, M., "CoRE Mirror Server", Work in Progress,
-              Internet-Draft, draft-vial-core-mirror-server-01, 10 April
-              2013, <https://www.ietf.org/archive/id/draft-vial-core-
-              mirror-server-01.txt>.
 
 
 
@@ -1737,6 +1737,12 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 31]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [I-D.vial-core-mirror-server]
+              Vial, M., "CoRE Mirror Server", Work in Progress,
+              Internet-Draft, draft-vial-core-mirror-server-01, 10 April
+              2013, <https://www.ietf.org/archive/id/draft-vial-core-
+              mirror-server-01.txt>.
 
    [I-D.wang-roll-energy-optimization-scheme]
               Wang, H., Wei, M., Li, S., Huang, Q., Wang, P., and C.
@@ -1780,12 +1786,6 @@ Internet-Draft               energy-overview                   July 2022
               RFC 1112, DOI 10.17487/RFC1112, August 1989,
               <https://www.rfc-editor.org/info/rfc1112>.
 
-   [RFC1142]  Oran, D., Ed., "OSI IS-IS Intra-domain Routing Protocol",
-              RFC 1142, DOI 10.17487/RFC1142, February 1990,
-              <https://www.rfc-editor.org/info/rfc1142>.
-
-
-
 
 
 
@@ -1793,6 +1793,10 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 32]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [RFC1142]  Oran, D., Ed., "OSI IS-IS Intra-domain Routing Protocol",
+              RFC 1142, DOI 10.17487/RFC1142, February 1990,
+              <https://www.rfc-editor.org/info/rfc1142>.
 
    [RFC1628]  Case, J., Ed., "UPS Management Information Base",
               RFC 1628, DOI 10.17487/RFC1628, May 1994,
@@ -1838,10 +1842,6 @@ Internet-Draft               energy-overview                   July 2022
               DOI 10.17487/RFC3433, December 2002,
               <https://www.rfc-editor.org/info/rfc3433>.
 
-   [RFC3550]  Schulzrinne, H., Casner, S., Frederick, R., and V.
-              Jacobson, "RTP: A Transport Protocol for Real-Time
-              Applications", STD 64, RFC 3550, DOI 10.17487/RFC3550,
-              July 2003, <https://www.rfc-editor.org/info/rfc3550>.
 
 
 
@@ -1849,6 +1849,11 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 33]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [RFC3550]  Schulzrinne, H., Casner, S., Frederick, R., and V.
+              Jacobson, "RTP: A Transport Protocol for Real-Time
+              Applications", STD 64, RFC 3550, DOI 10.17487/RFC3550,
+              July 2003, <https://www.rfc-editor.org/info/rfc3550>.
 
    [RFC3621]  Berger, A. and D. Romascanu, "Power Ethernet MIB",
               RFC 3621, DOI 10.17487/RFC3621, December 2003,
@@ -1890,11 +1895,6 @@ Internet-Draft               energy-overview                   July 2022
               FYI 36, RFC 4949, DOI 10.17487/RFC4949, August 2007,
               <https://www.rfc-editor.org/info/rfc4949>.
 
-   [RFC5548]  Dohler, M., Ed., Watteyne, T., Ed., Winter, T., Ed., and
-              D. Barthel, Ed., "Routing Requirements for Urban Low-Power
-              and Lossy Networks", RFC 5548, DOI 10.17487/RFC5548, May
-              2009, <https://www.rfc-editor.org/info/rfc5548>.
-
 
 
 
@@ -1905,6 +1905,11 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 34]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [RFC5548]  Dohler, M., Ed., Watteyne, T., Ed., Winter, T., Ed., and
+              D. Barthel, Ed., "Routing Requirements for Urban Low-Power
+              and Lossy Networks", RFC 5548, DOI 10.17487/RFC5548, May
+              2009, <https://www.rfc-editor.org/info/rfc5548>.
 
    [RFC5673]  Pister, K., Ed., Thubert, P., Ed., Dwars, S., and T.
               Phinney, "Industrial Routing Requirements in Low-Power and
@@ -1950,17 +1955,16 @@ Internet-Draft               energy-overview                   July 2022
               Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
               <https://www.rfc-editor.org/info/rfc6690>.
 
-   [RFC6763]  Cheshire, S. and M. Krochmal, "DNS-Based Service
-              Discovery", RFC 6763, DOI 10.17487/RFC6763, February 2013,
-              <https://www.rfc-editor.org/info/rfc6763>.
-
-
 
 
 Eckert & Boucadair       Expires 8 January 2023                [Page 35]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [RFC6763]  Cheshire, S. and M. Krochmal, "DNS-Based Service
+              Discovery", RFC 6763, DOI 10.17487/RFC6763, February 2013,
+              <https://www.rfc-editor.org/info/rfc6763>.
 
    [RFC6775]  Shelby, Z., Ed., Chakrabarti, S., Nordmark, E., and C.
               Bormann, "Neighbor Discovery Optimization for IPv6 over
@@ -2006,10 +2010,6 @@ Internet-Draft               energy-overview                   July 2022
               Object Context MIB", RFC 7461, DOI 10.17487/RFC7461, March
               2015, <https://www.rfc-editor.org/info/rfc7461>.
 
-   [RFC7577]  Quittek, J., Winter, R., and T. Dietz, "Definition of
-              Managed Objects for Battery Monitoring", RFC 7577,
-              DOI 10.17487/RFC7577, July 2015,
-              <https://www.rfc-editor.org/info/rfc7577>.
 
 
 
@@ -2017,6 +2017,11 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 36]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [RFC7577]  Quittek, J., Winter, R., and T. Dietz, "Definition of
+              Managed Objects for Battery Monitoring", RFC 7577,
+              DOI 10.17487/RFC7577, July 2015,
+              <https://www.rfc-editor.org/info/rfc7577>.
 
    [RFC7603]  Schoening, B., Chandramouli, M., and B. Nordman, "Energy
               Management (EMAN) Applicability Statement", RFC 7603,
@@ -2058,11 +2063,6 @@ Internet-Draft               energy-overview                   July 2022
               RFC 793, DOI 10.17487/RFC0793, September 1981,
               <https://www.rfc-editor.org/info/rfc793>.
 
-   [RFC8036]  Cam-Winget, N., Ed., Hui, J., and D. Popa, "Applicability
-              Statement for the Routing Protocol for Low-Power and Lossy
-              Networks (RPL) in Advanced Metering Infrastructure (AMI)
-              Networks", RFC 8036, DOI 10.17487/RFC8036, January 2017,
-              <https://www.rfc-editor.org/info/rfc8036>.
 
 
 
@@ -2073,6 +2073,12 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 37]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [RFC8036]  Cam-Winget, N., Ed., Hui, J., and D. Popa, "Applicability
+              Statement for the Routing Protocol for Low-Power and Lossy
+              Networks (RPL) in Advanced Metering Infrastructure (AMI)
+              Networks", RFC 8036, DOI 10.17487/RFC8036, January 2017,
+              <https://www.rfc-editor.org/info/rfc8036>.
 
    [RFC822]   Crocker, D., "STANDARD FOR THE FORMAT OF ARPA INTERNET
               TEXT MESSAGES", STD 11, RFC 822, DOI 10.17487/RFC0822,
@@ -2115,12 +2121,6 @@ Internet-Draft               energy-overview                   July 2022
               Multicast", BCP 229, RFC 8815, DOI 10.17487/RFC8815,
               August 2020, <https://www.rfc-editor.org/info/rfc8815>.
 
-   [RFC8824]  Minaburo, A., Toutain, L., and R. Andreasen, "Static
-              Context Header Compression (SCHC) for the Constrained
-              Application Protocol (CoAP)", RFC 8824,
-              DOI 10.17487/RFC8824, June 2021,
-              <https://www.rfc-editor.org/info/rfc8824>.
-
 
 
 
@@ -2129,6 +2129,12 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 38]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [RFC8824]  Minaburo, A., Toutain, L., and R. Andreasen, "Static
+              Context Header Compression (SCHC) for the Constrained
+              Application Protocol (CoAP)", RFC 8824,
+              DOI 10.17487/RFC8824, June 2021,
+              <https://www.rfc-editor.org/info/rfc8824>.
 
    [RFC8994]  Eckert, T., Ed., Behringer, M., Ed., and S. Bjarnason, "An
               Autonomic Control Plane (ACP)", RFC 8994,
@@ -2172,12 +2178,6 @@ Internet-Draft               energy-overview                   July 2022
               for Cellular Networks", RFC 9178, DOI 10.17487/RFC9178,
               May 2022, <https://www.rfc-editor.org/info/rfc9178>.
 
-   [VC2014]   Ong, D., Moors, T., and V. Sivaraman, "Comparison of the
-              energy, carbon and time costs of videoconferencing and in-
-              person meetings", DOI 10.1016/j.comcom.2014.02.009, 2014,
-              <https://www.sciencedirect.com/science/article/pii/
-              S0140366414000620>.
-
 
 
 
@@ -2185,6 +2185,12 @@ Eckert & Boucadair       Expires 8 January 2023                [Page 39]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   [VC2014]   Ong, D., Moors, T., and V. Sivaraman, "Comparison of the
+              energy, carbon and time costs of videoconferencing and in-
+              person meetings", DOI 10.1016/j.comcom.2014.02.009, 2014,
+              <https://www.sciencedirect.com/science/article/pii/
+              S0140366414000620>.
 
 Authors' Addresses
 
@@ -2201,12 +2207,6 @@ Authors' Addresses
    35000 Rennes
    France
    Email: mohamed.boucadair@orange.com
-
-
-
-
-
-
 
 
 
