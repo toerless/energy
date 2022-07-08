@@ -33,6 +33,17 @@ author:
        code: 35000
        country: France
        email: mohamed.boucadair@orange.com
+  -
+       name: Pascal Thubert
+       org: Cisco Systems, Inc.
+       street: 45 Allee des Ormes - BP1200, Building D
+       city: Sophia Antipolis
+       code: 06254 MOUGINS
+       country: France
+       phone: "+33 497 23 26 34"
+       email: pthubert@cisco.com
+
+
 
 informative:
   RFC768:
@@ -137,6 +148,7 @@ informative:
   I-D.boucadair-irtf-sdn-and-semantic-routing:
   I-D.petrescu-v6ops-ipv6-power-ipv4:
   I-D.lhan-problems-requirements-satellite-net:
+  I-D.ietf-tcpm-rfc793bis:
 
   VC2014:
     title: "Comparison of the energy, carbon and time costs of videoconferencing and in-person meetings"
@@ -189,7 +201,7 @@ solutions as appropriate.
 This document summarizes work that has been proposed to or performed 
 within the IETF/IRTF. Particularly, it covers IETF/IRTF RFCs as well as
 ISE RFCs and IETF/IRTF or individual submission drafts
-that where abandoned for variours reasons (e.g., lack of momentum, broad scope).
+that where abandoned for various reasons (e.g., lack of momentum, broad scope).
 
 There are various aspects how a given work can relate to energy that are
 classified into categories.  Such a classification does not attempt to propose
@@ -264,7 +276,7 @@ to support this scaling.
 
 At the core of scalability, even up to now, is the lightweight per-packet-processing enabled through
 end-to-end congestion loss management architecture as embodied through the IETF "Transmission Control Protocol"
-(TCP, {{I-D.ietf-tcpm-rfc793bis}} and successors). This model eliminated more expensive per-hop, per-packet processing, such as
+(TCP, {{RFC793}} and successors, e.g. {{I-D.ietf-tcpm-rfc793bis}}). This model eliminated more expensive per-hop, per-packet processing, such as
 would be required for reliable hop-by-hop forwarding through per-hop ARQ, which was key to scaling routers cost
 effectively.
 
@@ -1081,3 +1093,5 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 00: Initial version
 
 01: Added Co-author  (Mohamed Boucadair) - long list of typo fixes, editorial improvements in abstract, introduction and other chapters. Added section on satellite networks, devices with batteries, power benchmarking and SDN-based forwarding semantics.
+
+02: Minor text edits (med), Added co-author pascal (tte),
