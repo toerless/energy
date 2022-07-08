@@ -189,24 +189,24 @@ solutions as appropriate.
 This document summarizes work that has been proposed to or performed 
 within the IETF/IRTF. Particularly, it covers IETF/IRTF RFCs as well as
 ISE RFCs and IETF/IRTF or individual submission drafts
-that where abandoned (e.g., lack of momentum, broad scope).
+that where abandoned for variours reasons (e.g., lack of momentum, broad scope).
 
 There are various aspects how a given work can relate to energy that are
 classified into categories.  Such a classification does not attempt to propose
-a formal taxonomy but it is used for the sake of better readability
-Technologies are listed under a category that is specifically significant
-for example by being most narrow.
+a formal taxonomy but it is used for the sake of better readability.
+Technologies are listed under a category that is specifically significant, 
+for example, by being most narrow.
 
-This memo usually refers to the technologies by significant early RFC or draft version,
+This memo usually refers to the technologies by significant early RFC or specific draft version,
 as opposed to the newest. This is contrary to the common practice in IETF documents to
 refer to the newest version. This is done because it allows readers to better understand
-the historic timeline in which specific technology was introduced. Especially successful
+the historic timeline in which a specific technology was introduced. Especially successful
 IETF technologies will have newer RFC that updates such initial work.
 
 # Energy Saving: An Introduction
 
 Technologies that simply save energy compared to earlier/other alternatives are the
-broadest and most unspecific category. In this memo such energy saving simply refers
+broadest and most unspecific category. In this memo such an energy saving simply refers
 to energy savings in some unit of electricity, such as kWh and does not take other
 aspects into account.  See {{sustainability}} for more details.
 
@@ -241,7 +241,7 @@ introduced in the past decades with the Internet and the hyper-scaling that the 
 
 ## Energy Saving Through Scale
 
-### An example: Telephony
+### An Example: Telephony
 
 In most cases, energy saving through the use of IETF protocols compared to earlier (digitized or non digitized)
 solutions is purely a result of the reduction in the energy cost per bit over the decades in networking.
@@ -250,7 +250,7 @@ For example, the energy consumption of digital voice telephony through the IETF 
  prior voice technologies such as analog or digital "Time Division Multiplex" (TDM) telephony solely because of this 
 evolution in mostly device as well as physical-layer and link-layer networking technologies.
 
-### The packet multiplexing principle
+### The Packet Multiplexing Principle
 
 Nevertheless, it is at the heart of the packet multiplexing model employed by the IETF networking protocols
 IP ({{RFC791}}) and IPv6 ({{RFC1883}} and successors) to successfully support this scaling that brough down
@@ -260,30 +260,32 @@ most widely deployed packet networking protocols, they where the ones who at lea
 to break away from other protocols both in scale of deployment, as well as in development of further technologies
 to support this scaling.
 
-### End-to-end transport
+### End-to-End Transport
 
 At the core of scalability, even up to now, is the lightweight per-packet-processing enabled through
-end-to-end congestion loss management architecture as embodied through the IETF "Transport Control Protocol"
-(TCP, {{RFC793}} and successors). This model eliminated more expensive per-hop, per-packet processing, such as
+end-to-end congestion loss management architecture as embodied through the IETF "Transmission Control Protocol"
+(TCP, {{I-D.ietf-tcpm-rfc793bis}} and successors). This model eliminated more expensive per-hop, per-packet processing, such as
 would be required for reliable hop-by-hop forwarding through per-hop ARQ, which was key to scaling routers cost
 effectively.
 
-### Internet Routing Architectures
+### Global vs Restricted Connectivity: The Internet Routing Architectures
 
 The meshed peer-to-peer and transitive routing of the Internet enabled through the IETF "Border Gateway (Routing)
 Protocol (BGP, {{RFC4271}} as well as predecessors) is another key factor to successful scalability, because it
-enabled competitive market forces to explore markets quickly. Prior to the Internet, the public often only
+enabled competitive market forces to explore markets quickly. 
+
+Prior to the Internet, the public often only
 had access to highly regulated international networking connections through often per-country monopoly regulated data networks.
 
-### Freedom to innovate
+### Freedom to Innovate
 
 (non-IP) networks often also did not allow as much "freedom-to-innovate" (as it is often called in the IETF)
 for applications running over it. Instead those networks where exploring the coupling of packet transport with
 higher layer services to allow the network operator some degree of revenue sharing with the services running
-on top of it, resulting not only in higher cost of those services but also preferential and often
+on top of it. Such approaches resulted not only in higher cost of those services but also (likely) preferential and (often)
 exclusionary treatment of network traffic not fitting the perceived highest revenue service options.
 
-### End-to-end encryption
+### End-to-End Encryption
 
 When the same business practices where applied to IP network, it was one of the key factors leading to
 the development of IETF end-to-end encryption though protocols such as "Transport Layer Security" (TLS, {{RFC2246}}
@@ -291,10 +293,10 @@ and its successors). This further strengthened the ability to scale service/appl
 cost for the underlying packet transport, arguably driving innovation into ever faster networking technology
 and likely lower cost per bit.
 
-### Converged networks
+### Converged Networks
 
 Another key factor to support scaling where IETF technologies that allowed to multiplex different types of traffic
-(such as "Voice, Video and Data") which previously used/required separate networks with typically incompatible networking
+(e.g., realtime vs. non-realtime) which previously used separate networks with typically incompatible networking
 technologies.
 
 Eliminating multiple physical networks with separate routing/forwarding nodes and separate links affords significant
@@ -339,7 +341,7 @@ today by removing even the option for any (non-IP/SIP) analog or digital (ISDN) 
 instead delivering those purely as services over adaptation interfaces on home routers (TBD: Any 
 RFC to cite for those tunneling/adaptation services ?). 
 
-# Higher or new energy consumption
+# Higher or New Energy Consumption
 
 Digitized, network centric workflows may consume more energy than their non-digitized counterpart,
 as may new network centric workflows without easy to compare prior workflows.
@@ -396,19 +398,19 @@ the Internet itself can similarly to how it does for digitization play a key rol
 networked IT infrastructures. The following subsections list three examples areas where global high performance,
 low-cost Internet networking is a key requirement.
 
-## Follow the energy cloud scheduling
+## Follow the Energy Cloud Scheduling
 
 Renewable energy resources (except for water) do commonly have fluctuating energy output. For example,
 solar energy output correlates to night/day and strength of sunlight. Cloud Data Centers (DC) consume a significant
 amount of the IT sectors energy. Some workloads may simply be scheduled to consume energy in accordance
 with the amount of available renewable energy at the time, not requiring the network. Significant
 workloads are not elastic in time, such as interactive cloud DC interactive work (cloud based
-applications) or entertainment (gaming etc.). These workloads may be instantiated or even
+applications) or entertainment (gaming, etc.). These workloads may be instantiated or even
 dynamically (over time) migrate to a DC location with sufficient renewable energy and the Internet
 (or large TCP/IP OTT backbone networks) will serve as the fabric to access the remote DC and
 to coordinate the instantiation/migration.
 
-## Minimize generated heat
+## Minimize Generated Heat
 
 The majority of energy in cloud DC is normally also wasted as exhaust heat, requiring even more energy
 for cooling. The warmer the location, the more energy needs to be spent for cooling. For this
@@ -418,7 +420,7 @@ consumed in the DC to be renewable itself). The Internet again plays the role of
 to those type of DC whole location is not optimized for consumption but for sustainable generation
 of compute and storage.
 
-## Heat recovery
+## Heat Recovery
 
 Exhaust heat, especially from compute in DC, can be recovered when it is coupled to heating systems
 ranging in size all the way from individual familys home through larger buildings (hotels etc.) all the
@@ -655,7 +657,7 @@ state in the network rather than relying on heuristics.
 
 ### (IP) Multicast
 
-#### Power saving with multicast
+#### Power Saving with Multicast
 
 IP Multicast was introduced with {{RFC1112}} and today also called "Any Source Multicast" (ASM)
 has various protocols standardized in the IETF across multiple working groups. There are also
@@ -682,7 +684,7 @@ alternative (with so-called ingress replication) is not possible due to the tota
 traffic generated. This includes wireless/radio networks, where equally airtime is the limiting
 factor.
 
-#### Power waste through multicast based service coordination {#coordination}
+#### Power Waste Through Multicast-based Service Coordination {#coordination}
 
 (IP) multicast is often not used to distribute data requested by receivers, but also
 coordination type functions such as service or resource announcement, discovery or selection.
@@ -715,7 +717,7 @@ avoid/minimize its ill-advised use with these type of coordination functions, wh
 efficiency is an issue. {{RFC8815}} is an example for deprecating ASM for other reasons
 in Service Provider networks.
 
-#### Multicast problems with WiFi {#wifi}
+#### Multicast Problems with Wi-Fi {#wifi}
 
 {{RFC9119}} covers multicast challenges and solution (proposals) for IP Multicast over 
 WiFi. With respect to power consumption, it discusses the following aspects.
@@ -734,7 +736,7 @@ IP multicast and describes their specific challenges and possible improvements.
 
 (d) Existing proprietary conversion of WiFi multicast to WiFi unicast packets.
 
-### Sleepy nodes {#sleepy}
+### Sleepy Nodes {#sleepy}
 
 Sleepy nodes are one of the most common design solutions in support of power saving.
 This includes LLN level constrained nodes, but also nodes with significant battery capacity,
@@ -866,7 +868,7 @@ the USA "Department of Energy" (DoE).
 
 # (Limited) Energy Management for Networks
 
-## Metrics
+## Some Metrics
 
 A 2010-2013 draft {{I-D.manral-bmwg-power-usage}}, which was not adopted
 discussed and proposed metrics for power consumption that where intended
@@ -961,7 +963,7 @@ There are currently no YANG equivalent modules. Such modules would not only
 be designed to echo the EMAN MIBs but would also allow to control dedicated
  power optimization engines instead of relying upon static and frozen vendor-specific optimization.
 
-# Powerawareness in Forwarding and Routing Protocols
+# Power-awareness in Forwarding and Routing Protocols
 
 ## Power Aware Networks (PANET) {#PANET}
 
