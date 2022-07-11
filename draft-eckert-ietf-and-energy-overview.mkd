@@ -729,12 +729,12 @@ avoid/minimize its ill-advised use with these type of coordination functions, wh
 efficiency is an issue. {{RFC8815}} is an example for deprecating ASM for other reasons
 in Service Provider networks.
 
-#### Multicast Problems with Wi-Fi {#wifi}
+#### Multicast Problems in Wireless Networks {#wifi}
 
-{{RFC9119}} covers multicast challenges and solution (proposals) for IP Multicast over 
-WiFi. With respect to power consumption, it discusses the following aspects.
+{{RFC9119}} covers multicast challenges and solutions (proposals) for IP Multicast over 
+Wi-Fi. With respect to power consumption, it discusses the following aspects:
 
-(a) Unnecessary wake-up of power constrained WiFi Stations (STA) nodes can be minimized by wireless
+(a) Unnecessary wake-up of power constrained Wi-Fi Stations (STA) nodes can be minimized by wireless
 Access Points (APs) that buffer multicast packets so they are sent only periodically when
 those nodes wake up. 
 
@@ -746,7 +746,10 @@ less desirable.
 (c) It lists the most widely deployed protocols using aforementioned coordination via
 IP multicast and describes their specific challenges and possible improvements.
 
-(d) Existing proprietary conversion of WiFi multicast to WiFi unicast packets.
+(d) Existing proprietary conversion of WiFi multicast to Wi-Fi unicast packets.
+
+
+{{I-D.desmouceaux-ipv6-mcast-wifi-power-usage}} focuses on IPv6-related concerns of multicast traffic in large  wireless network. This document provides as set of statistics and the induced device power consumption of such flows.
 
 ### Sleepy Nodes {#sleepy}
 
