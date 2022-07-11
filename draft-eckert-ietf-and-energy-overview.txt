@@ -8,11 +8,13 @@ Intended status: Informational                              M. Boucadair
 Expires: 12 January 2023                                          Orange
                                                               P. Thubert
                                                      Cisco Systems, Inc.
+                                                             J. Tentsura
+                                                               Microsoft
                                                             11 July 2022
 
 
                      IETF and Energy - An Overview
-                draft-eckert-ietf-and-energy-overview-02
+                draft-eckert-ietf-and-energy-overview-04
 
 Abstract
 
@@ -47,8 +49,6 @@ Copyright Notice
 
    Copyright (c) 2022 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
-
-
 
 
 
@@ -124,12 +124,13 @@ Internet-Draft               energy-overview                   July 2022
    8.  Power-awareness in Forwarding and Routing Protocols . . . . .  25
      8.1.  Power Aware Networks (PANET)  . . . . . . . . . . . . . .  25
      8.2.  SDN-based Semantic Forwarding . . . . . . . . . . . . . .  26
-     8.3.  Misc  . . . . . . . . . . . . . . . . . . . . . . . . . .  26
+     8.3.  Misc  . . . . . . . . . . . . . . . . . . . . . . . . . .  27
    9.  Gaps  . . . . . . . . . . . . . . . . . . . . . . . . . . . .  27
    10. Summary . . . . . . . . . . . . . . . . . . . . . . . . . . .  27
-   11. Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  27
-   12. Informative References  . . . . . . . . . . . . . . . . . . .  28
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  40
+   11. Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  28
+   12. Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  28
+   13. Informative References  . . . . . . . . . . . . . . . . . . .  28
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  41
 
 1.  Introduction
 
@@ -159,7 +160,6 @@ Internet-Draft               energy-overview                   July 2022
    memo such an energy saving simply refers to energy savings in some
    unit of electricity, such as kWh and does not take other aspects into
    account.  See Section 4 for more details.
-
 
 
 
@@ -248,7 +248,7 @@ Internet-Draft               energy-overview                   July 2022
    nodes, especially for networks larger than building scale networks.
    While the IETF protocols have not been the first or over their early
    decades necessarily the most widely deployed packet networking
-   protocols, they where the ones who at least during the 1990th started
+   protocols, they where the ones who at least during the 1990s started
    to break away from other protocols both in scale of deployment, as
    well as in development of further technologies to support this
    scaling.
@@ -342,7 +342,7 @@ Internet-Draft               energy-overview                   July 2022
 
    The first (non-IETF) wider adopted technology promising converged
    networks was "Asynchronuous Transfer Mode" (ATM), which was designed
-   and deployed at the end of the 1980th to support specifically
+   and deployed at the end of the 1980s to support specifically
    multiplexing of "Data Voice and Video", where both Voice and Video
    (at that time) required loss-free deterministic bounded latency and
    low-jitter and had therefore their own Time-Division-Multiplex (TDM)
@@ -350,7 +350,7 @@ Internet-Draft               energy-overview                   July 2022
    multiplexing.  This technology was very expensive on a per-bit basis
    due to its cell-forwarding nature though.
 
-   At the end of the 1980th, it was proven in [BOUNDED_LATENCY] that
+   At the end of the 1980s, it was proven in [BOUNDED_LATENCY] that
    variable length packet multiplexing in network can also support non-
    NP-hard calculations for bounded latency.  This lead to the IETF
    "Integrated Services WG" (INTSERV) to support such guaranteed
@@ -366,9 +366,9 @@ Internet-Draft               energy-overview                   July 2022
 
 2.2.7.2.  DiffServ
 
-   Due to the much higher per-packet processing overhead of INSERV
+   Due to the much higher per-packet processing overhead of INTSERV
    versus standard (so-called Best-Effort) Internet traffic, the INTSERV
-   model was already recognized in the 1990th to not support highest-
+   model was already recognized in the 1990s to not support highest-
    scale at lowest cost, leading to the parallel development of the IETF
    "Differentiated Services WG" (DIFFSERV) model defined in [RFC2475].
    This has since then become the dominant technology to support
@@ -538,7 +538,7 @@ Internet-Draft               energy-overview                   July 2022
    If one considers textual communications via email and netwnews (using
    e.g.: NNTP) as early forms of Telecollaboration, then
    telecollaboration history through IETF technology reaches back into
-   the 1980th and earlier.
+   the 1980s and earlier.
 
    Around 1990, the IETF work on IP Multicast (e.g.[RFC1112] and later)
    enabled the first efficient forms of audio/video group collaboration
@@ -1363,14 +1363,15 @@ Internet-Draft               energy-overview                   July 2022
 8.1.  Power Aware Networks (PANET)
 
    In 2013/2014, some drafts proposed how networks themselves,
-   specifically those of Internet Service Providers (ISP) could become
-   "power aware" to the extent that its power consumption could be
-   regulated (or self-regulate) based on the current required
-   performance of the network and/or available power, by reducing excess
-   (or too power expensive) network capacity through switching-off/low-
-   powering components such as redundant routers, linecards, interfaces
-   or links, or reducing power consumption by reducing bitrates on
-   links.
+   specifically those of Internet Service Providers (ISP) could
+   dynamically regulate their power consumption based on the required
+   performance, for example by switching off or low-powering non-needed
+   components (links, nodes, linecards) or changing speeds on links, or
+   reducing clock-rates of processing elements, and/or routing traffic
+   to utilize as few components as will support the required
+   performance.  The authors called tis "Power Aware Networks" (PANET),
+   even though no awareness of actual power consumption is required in
+   this approach.
 
    The 2013 "Power-Aware Networks (PANET): Problem Statement"
    [I-D.zhang-panet-problem-statement] gives an overview of this
@@ -1390,10 +1391,9 @@ Internet-Draft               energy-overview                   July 2022
    [I-D.mjsraman-panet-inter-as-power-source] proposed BGP attributes to
    allow calculation of power efficient (or for example green) paths.
 
-   One core market driver for this work where rolling blackouts that
-   especially affected India at the time of these drafts, raising the
-   desire to be for example reducing the total power consumption of a
-   network in times of such energy emergencies.
+
+
+
 
 
 
@@ -1401,6 +1401,11 @@ Eckert, et al.           Expires 12 January 2023               [Page 25]
 
 Internet-Draft               energy-overview                   July 2022
 
+
+   One core market driver for this work where rolling blackouts that
+   especially affected India at the time of these drafts, raising the
+   desire to be for example reducing the total power consumption of a
+   network in times of such energy emergencies.
 
    While there was technical interest in the IETF, the market
    significance for the vendors mostly present in the IETF was
@@ -1441,6 +1446,18 @@ Internet-Draft               energy-overview                   July 2022
    "idle" state (such nodes may be removed from adjacency tables if they
    don't participate in routing advertisements).
 
+
+
+
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 26]
+
+Internet-Draft               energy-overview                   July 2022
+
+
 8.3.  Misc
 
    The non-adopted, expired 2013 draft
@@ -1450,14 +1467,6 @@ Internet-Draft               energy-overview                   July 2022
    e.g.: varous L2 technologies such as switched optical fiber networks.
    It primarily claims the issue that the existing management objects
    are not sufficient to express energy management related aspects, and
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 26]
-
-Internet-Draft               energy-overview                   July 2022
-
-
    thus do not allow to build energy conscious policies into PCE for
    such GMPLS networks.
 
@@ -1496,15 +1505,6 @@ Internet-Draft               energy-overview                   July 2022
 
    TBD
 
-11.  Changelog
-
-   [RFC-Editor: this section to be removed in final document.]
-
-   The master for this document is hosted at http://github.com/toerless/
-   energy.  Please submit Issues and/or Pull-requests for proposed
-   changes or join the team of authors and edit yourself.
-
-   00: Initial version
 
 
 
@@ -1514,6 +1514,20 @@ Eckert, et al.           Expires 12 January 2023               [Page 27]
 Internet-Draft               energy-overview                   July 2022
 
 
+11.  Changelog
+
+   Thanks for Fred Baker for his review and suggestions.
+
+12.  Changelog
+
+   [RFC-Editor: this section to be removed in final document.]
+
+   The master for this document is hosted at http://github.com/toerless/
+   energy.  Please submit Issues and/or Pull-requests for proposed
+   changes or join the team of authors and edit yourself.
+
+   00: Initial version
+
    01: Added Co-author (Mohamed Boucadair) - long list of typo fixes,
    editorial improvements in abstract, introduction and other chapters.
    Added section on satellite networks, devices with batteries, power
@@ -1522,7 +1536,9 @@ Internet-Draft               energy-overview                   July 2022
    02: Minor text edits (med), add pointer to additional draft (med),
    Added co-author pascal (tte),
 
-12.  Informative References
+   03: Aded Jeff Tentsura as co-author
+
+13.  Informative References
 
    [BOUNDED_LATENCY]
               Cruz, R.L., "A calculus for network delay. I. Network
@@ -1544,6 +1560,16 @@ Internet-Draft               energy-overview                   July 2022
               05, 21 October 2013, <https://www.ietf.org/archive/id/
               draft-bormann-core-roadmap-05.txt>.
 
+
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 28]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [I-D.boucadair-irtf-sdn-and-semantic-routing]
               Boucadair, M., Trossen, D., and A. Farrel, "Considerations
               for the use of SDN in Semantic Routing Networks", Work in
@@ -1562,14 +1588,6 @@ Internet-Draft               energy-overview                   July 2022
               Chakrabarti, S., Nordmark, E., and M. Wasserman, "Energy
               Aware IPv6 Neighbor Discovery Optimizations", Work in
               Progress, Internet-Draft, draft-chakrabarti-nordmark-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 28]
-
-Internet-Draft               energy-overview                   July 2022
-
-
               energy-aware-nd-02, 12 March 2012,
               <https://www.ietf.org/archive/id/draft-chakrabarti-
               nordmark-energy-aware-nd-02.txt>.
@@ -1595,6 +1613,19 @@ Internet-Draft               energy-overview                   July 2022
               <https://www.ietf.org/archive/id/draft-fossati-core-
               monitor-option-00.txt>.
 
+
+
+
+
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 29]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [I-D.fossati-core-publish-option]
               Fossati, T., Giacomin, P., and S. Loreto, "Publish Option
               for CoAP", Work in Progress, Internet-Draft, draft-
@@ -1617,21 +1648,12 @@ Internet-Draft               energy-overview                   July 2022
               <https://www.ietf.org/archive/id/draft-ietf-core-coap-
               pubsub-10.txt>.
 
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 29]
-
-Internet-Draft               energy-overview                   July 2022
-
-
    [I-D.ietf-dnssd-srp]
               Lemon, T. and S. Cheshire, "Service Registration Protocol
               for DNS-Based Service Discovery", Work in Progress,
-              Internet-Draft, draft-ietf-dnssd-srp-13, 24 April 2022,
+              Internet-Draft, draft-ietf-dnssd-srp-14, 11 July 2022,
               <https://www.ietf.org/archive/id/draft-ietf-dnssd-srp-
-              13.txt>.
+              14.txt>.
 
    [I-D.ietf-tcpm-rfc793bis]
               Eddy, W. M., "Transmission Control Protocol (TCP)
@@ -1646,6 +1668,19 @@ Internet-Draft               energy-overview                   July 2022
               draft-jennings-energy-pricing-01, 10 July 2011,
               <https://www.ietf.org/archive/id/draft-jennings-energy-
               pricing-01.txt>.
+
+
+
+
+
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 30]
+
+Internet-Draft               energy-overview                   July 2022
+
 
    [I-D.lhan-problems-requirements-satellite-net]
               Han, L., Li, R., Retana, A., Chen, M., Su, L., Jiang, T.,
@@ -1670,18 +1705,6 @@ Internet-Draft               energy-overview                   July 2022
               2013, <https://www.ietf.org/archive/id/draft-mjsraman-
               panet-inter-as-power-source-00.txt>.
 
-
-
-
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 30]
-
-Internet-Draft               energy-overview                   July 2022
-
-
    [I-D.mjsraman-rtgwg-pim-power]
               Raman, S., Venkataswami, B. V., Raina, G., and V. Srini,
               "Building power optimal Multicast Trees", Work in
@@ -1705,6 +1728,16 @@ Internet-Draft               energy-overview                   July 2022
               <https://www.ietf.org/archive/id/draft-petrescu-v6ops-
               ipv6-power-ipv4-00.txt>.
 
+
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 31]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [I-D.rahman-core-sleepy]
               Rahman, A., "Enhanced Sleepy Node Support for CoAP", Work
               in Progress, Internet-Draft, draft-rahman-core-sleepy-05,
@@ -1725,18 +1758,6 @@ Internet-Draft               energy-overview                   July 2022
               statement-01, 21 October 2012,
               <https://www.ietf.org/archive/id/draft-rahman-core-sleepy-
               problem-statement-01.txt>.
-
-
-
-
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 31]
-
-Internet-Draft               energy-overview                   July 2022
-
 
    [I-D.retana-rtgwg-eacp]
               Retana, A., White, R., and M. Paul, "A Framework and
@@ -1764,6 +1785,15 @@ Internet-Draft               energy-overview                   July 2022
               2013, <https://www.ietf.org/archive/id/draft-vial-core-
               mirror-server-01.txt>.
 
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 32]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [I-D.wang-roll-energy-optimization-scheme]
               Wang, H., Wei, M., Li, S., Huang, Q., Wang, P., and C.
               Wang, "An energy optimization routing scheme for LLSs",
@@ -1787,13 +1817,6 @@ Internet-Draft               energy-overview                   July 2022
               <https://www.ietf.org/archive/id/draft-zhang-greennet-
               01.txt>.
 
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 32]
-
-Internet-Draft               energy-overview                   July 2022
-
-
    [I-D.zhang-panet-problem-statement]
               Zhang, B., Shi, J., Dong, J., Zhang, M., and M. Boucadair,
               "Power-Aware Networks (PANET): Problem Statement", Work in
@@ -1816,6 +1839,16 @@ Internet-Draft               energy-overview                   July 2022
    [RFC1142]  Oran, D., Ed., "OSI IS-IS Intra-domain Routing Protocol",
               RFC 1142, DOI 10.17487/RFC1142, February 1990,
               <https://www.rfc-editor.org/info/rfc1142>.
+
+
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 33]
+
+Internet-Draft               energy-overview                   July 2022
+
 
    [RFC1628]  Case, J., Ed., "UPS Management Information Base",
               RFC 1628, DOI 10.17487/RFC1628, May 1994,
@@ -1842,14 +1875,6 @@ Internet-Draft               energy-overview                   July 2022
               RFC 2246, DOI 10.17487/RFC2246, January 1999,
               <https://www.rfc-editor.org/info/rfc2246>.
 
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 33]
-
-Internet-Draft               energy-overview                   July 2022
-
-
    [RFC2328]  Moy, J., "OSPF Version 2", STD 54, RFC 2328,
               DOI 10.17487/RFC2328, April 1998,
               <https://www.rfc-editor.org/info/rfc2328>.
@@ -1874,6 +1899,13 @@ Internet-Draft               energy-overview                   July 2022
               Applications", STD 64, RFC 3550, DOI 10.17487/RFC3550,
               July 2003, <https://www.rfc-editor.org/info/rfc3550>.
 
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 34]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [RFC3621]  Berger, A. and D. Romascanu, "Power Ethernet MIB",
               RFC 3621, DOI 10.17487/RFC3621, December 2003,
               <https://www.rfc-editor.org/info/rfc3621>.
@@ -1895,16 +1927,6 @@ Internet-Draft               energy-overview                   July 2022
               Border Gateway Protocol 4 (BGP-4)", RFC 4271,
               DOI 10.17487/RFC4271, January 2006,
               <https://www.rfc-editor.org/info/rfc4271>.
-
-
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 34]
-
-Internet-Draft               energy-overview                   July 2022
-
 
    [RFC4607]  Holbrook, H. and B. Cain, "Source-Specific Multicast for
               IP", RFC 4607, DOI 10.17487/RFC4607, August 2006,
@@ -1928,6 +1950,17 @@ Internet-Draft               energy-overview                   July 2022
               D. Barthel, Ed., "Routing Requirements for Urban Low-Power
               and Lossy Networks", RFC 5548, DOI 10.17487/RFC5548, May
               2009, <https://www.rfc-editor.org/info/rfc5548>.
+
+
+
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 35]
+
+Internet-Draft               energy-overview                   July 2022
+
 
    [RFC5673]  Pister, K., Ed., Thubert, P., Ed., Dwars, S., and T.
               Phinney, "Industrial Routing Requirements in Low-Power and
@@ -1953,15 +1986,6 @@ Internet-Draft               energy-overview                   July 2022
               "The Trickle Algorithm", RFC 6206, DOI 10.17487/RFC6206,
               March 2011, <https://www.rfc-editor.org/info/rfc6206>.
 
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 35]
-
-Internet-Draft               energy-overview                   July 2022
-
-
    [RFC6272]  Baker, F. and D. Meyer, "Internet Protocols for the Smart
               Grid", RFC 6272, DOI 10.17487/RFC6272, June 2011,
               <https://www.rfc-editor.org/info/rfc6272>.
@@ -1986,6 +2010,14 @@ Internet-Draft               energy-overview                   July 2022
               Discovery", RFC 6763, DOI 10.17487/RFC6763, February 2013,
               <https://www.rfc-editor.org/info/rfc6763>.
 
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 36]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [RFC6775]  Shelby, Z., Ed., Chakrabarti, S., Nordmark, E., and C.
               Bormann, "Neighbor Discovery Optimization for IPv6 over
               Low-Power Wireless Personal Area Networks (6LoWPANs)",
@@ -2006,17 +2038,6 @@ Internet-Draft               energy-overview                   July 2022
               and B. Claise, "Requirements for Energy Management",
               RFC 6988, DOI 10.17487/RFC6988, September 2013,
               <https://www.rfc-editor.org/info/rfc6988>.
-
-
-
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 36]
-
-Internet-Draft               energy-overview                   July 2022
-
 
    [RFC7030]  Pritikin, M., Ed., Yee, P., Ed., and D. Harkins, Ed.,
               "Enrollment over Secure Transport", RFC 7030,
@@ -2046,6 +2067,13 @@ Internet-Draft               energy-overview                   July 2022
               DOI 10.17487/RFC7577, July 2015,
               <https://www.rfc-editor.org/info/rfc7577>.
 
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 37]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [RFC7603]  Schoening, B., Chandramouli, M., and B. Nordman, "Energy
               Management (EMAN) Applicability Statement", RFC 7603,
               DOI 10.17487/RFC7603, August 2015,
@@ -2066,13 +2094,6 @@ Internet-Draft               energy-overview                   July 2022
               Home Automation and Building Control", RFC 7733,
               DOI 10.17487/RFC7733, February 2016,
               <https://www.rfc-editor.org/info/rfc7733>.
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 37]
-
-Internet-Draft               energy-overview                   July 2022
-
 
    [RFC7772]  Yourtchenko, A. and L. Colitti, "Reducing Energy
               Consumption of Router Advertisements", BCP 202, RFC 7772,
@@ -2099,6 +2120,16 @@ Internet-Draft               energy-overview                   July 2022
               Networks", RFC 8036, DOI 10.17487/RFC8036, January 2017,
               <https://www.rfc-editor.org/info/rfc8036>.
 
+
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 38]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [RFC822]   Crocker, D., "STANDARD FOR THE FORMAT OF ARPA INTERNET
               TEXT MESSAGES", STD 11, RFC 822, DOI 10.17487/RFC0822,
               August 1982, <https://www.rfc-editor.org/info/rfc822>.
@@ -2118,17 +2149,6 @@ Internet-Draft               energy-overview                   July 2022
               Bormann, "Sensor Measurement Lists (SenML)", RFC 8428,
               DOI 10.17487/RFC8428, August 2018,
               <https://www.rfc-editor.org/info/rfc8428>.
-
-
-
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 38]
-
-Internet-Draft               energy-overview                   July 2022
-
 
    [RFC8575]  Jiang, Y., Ed., Liu, X., Xu, J., and R. Cummings, Ed.,
               "YANG Data Model for the Precision Time Protocol (PTP)",
@@ -2157,6 +2177,15 @@ Internet-Draft               energy-overview                   July 2022
               DOI 10.17487/RFC8824, June 2021,
               <https://www.rfc-editor.org/info/rfc8824>.
 
+
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 39]
+
+Internet-Draft               energy-overview                   July 2022
+
+
    [RFC8994]  Eckert, T., Ed., Behringer, M., Ed., and S. Bjarnason, "An
               Autonomic Control Plane (ACP)", RFC 8994,
               DOI 10.17487/RFC8994, May 2021,
@@ -2177,14 +2206,6 @@ Internet-Draft               energy-overview                   July 2022
               Header Compression and Fragmentation (SCHC) over LoRaWAN",
               RFC 9011, DOI 10.17487/RFC9011, April 2021,
               <https://www.rfc-editor.org/info/rfc9011>.
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 39]
-
-Internet-Draft               energy-overview                   July 2022
-
 
    [RFC9119]  Perkins, C., McBride, M., Stanley, D., Kumari, W., and JC.
               Zúñiga, "Multicast Considerations over IEEE 802 Wireless
@@ -2213,6 +2234,14 @@ Internet-Draft               energy-overview                   July 2022
               <https://www.sciencedirect.com/science/article/pii/
               S0140366414000620>.
 
+
+
+
+Eckert, et al.           Expires 12 January 2023               [Page 40]
+
+Internet-Draft               energy-overview                   July 2022
+
+
 Authors' Addresses
 
    Toerless Eckert (editor)
@@ -2230,18 +2259,6 @@ Authors' Addresses
    Email: mohamed.boucadair@orange.com
 
 
-
-
-
-
-
-
-
-Eckert, et al.           Expires 12 January 2023               [Page 40]
-
-Internet-Draft               energy-overview                   July 2022
-
-
    Pascal Thubert
    Cisco Systems, Inc.
    45 Allee des Ormes - BP1200, Building D
@@ -2251,26 +2268,9 @@ Internet-Draft               energy-overview                   July 2022
    Email: pthubert@cisco.com
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Jeff Tentsura
+   Microsoft
+   Email: jefftant.ietf@gmail.com
 
 
 
