@@ -258,7 +258,7 @@ introduced in the past decades with the Internet and the hyper-scaling that the 
 
 ## Energy Saving Through Scale
 
-### An Example: Telephony
+### An Iconic Example: Telephony
 
 In most cases, energy saving through the use of IETF protocols compared to earlier (digitized or non digitized)
 solutions is purely a result of the reduction in the energy cost per bit over the decades in networking.
@@ -405,7 +405,7 @@ and the energy consumption it produces.
 
 # Some Notes on Sustainability {#sustainability}
 
-Sustainability is the principle to utilize resources in a way that they do not diminish or run out over the long term (e.g., ore depletion requried for building hardware).
+Sustainability is the principle to utilize resources in a way that they do not diminish or run out over the long term (e.g., ore depletion required for building hardware).
 Beyond the above covered energy saving, sustainability relates with respect to the IETF specifically to the use of 
 renewable sources of energy to minimize exhaustion of fossile resources, and the impact of IETF technologies
 on global warming to avoid worsening living conditions on the planet.
@@ -512,7 +512,7 @@ in air travel.
 
 ## Low Power and Lossy Networks (LLN) {#LLN}
 
-Low Power and Lossy Networks are networks in which nodes and/or radio links have constraints.
+Low Power and Lossy Networks (LLNs) are networks in which nodes and/or radio links have constraints.
 Low power consumption constraints in nodes often originate from the need to operate nodes from
 as long as possible from battery and/or energy harvesting such as (today most commonly) solar panels
 associated with the node or ambient energy such as energy harvesting from movement for wearable nodes
@@ -842,7 +842,7 @@ Most of the overview in this document is not specific to networks used for Smart
 Grid applications but just summarized in the document for the above described
 outreach and education to the community.  The aspects most specific to Smart Grids
 is the back in 2011 still somewhat in its infancy adaptation of IPv6 network
-technologies to LLN networks (see {{LLN}} below): smart meters, circuit breakers,
+technologies to LLN networks (see {{LLN}}): smart meters, circuit breakers,
 load measurement devices, car chargers and so on - all those devices would
 most likely be connected to the network via a low-power radio networks, which
 ideally would utilize IPv6 directly. Support for LLN networks with IPv6 has
@@ -983,7 +983,7 @@ There are currently no YANG equivalent modules. Such modules would not only
 be designed to echo the EMAN MIBs but would also allow to control dedicated
  power optimization engines instead of relying upon static and frozen vendor-specific optimization.
 
-# Power-awareness in Forwarding and Routing Protocols
+# Power-Awareness in Forwarding and Routing Protocols
 
 ## Power Aware Networks (PANET) {#PANET}
 
