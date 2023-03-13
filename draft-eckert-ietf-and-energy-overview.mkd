@@ -993,7 +993,7 @@ regulate their power consumption based on the required performance, for
 example by switching off or low-powering non-needed components
 (links, nodes, linecards) or changing speeds on links, or reducing clock-rates
 of processing elements, and/or routing traffic to utilize as few components
-as will support the required performance. The authors called tis "Power Aware Networks" (PANET),
+as will support the required performance. The authors called this "Power Aware Networks" (PANET),
  even though no awareness of actual power consumption is required in this approach. 
 
 The 2013 "Power-Aware Networks (PANET): Problem Statement" {{I-D.zhang-panet-problem-statement}}
