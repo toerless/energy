@@ -1,8 +1,8 @@
 ---
 coding: utf-8
 
-title: IETF and Energy - An Overview
-abbrev: energy-overview
+title: An Overview of Energy-related Effort within the IETF 
+abbrev: IETF Energy Overview
 docname: draft-eckert-ietf-and-energy-overview-04
 stream: independent
 category: info
@@ -194,7 +194,7 @@ This memo provides an overview of work performed by or proposed within
 the IETF related to energy and/or green: awareness, management, control or
 reduction of consumption of energy, and sustainability as it related to the IETF.
 
-This document is written to help those unfamiliar with the work but 
+This document is written to help those unfamiliar with that work, but 
 interested in it, in the hope to raise more interest in energy-related
 activities within the IETF, such as identifying gaps and investigating
 solutions as appropriate.
@@ -208,40 +208,40 @@ within the IETF/IRTF. Particularly, it covers IETF/IRTF RFCs as well as
 ISE RFCs and IETF/IRTF or individual submission drafts
 that where abandoned for various reasons (e.g., lack of momentum, broad scope).
 
-There are various aspects how a given work can relate to energy that are
+There are various aspects how a given work relates to energy that are
 classified into categories.  Such a classification does not attempt to propose
-a formal taxonomy but it is used for the sake of better readability.
+a formal taxonomy, but is used for the sake of better readability.
 Technologies are listed under a category that is specifically significant, 
 for example, by being most narrow.
 
 This memo usually refers to the technologies by significant early RFC or specific draft version,
 as opposed to the newest. This is contrary to the common practice in IETF documents to
-refer to the newest version. This is done because it allows readers to better understand
-the historic timeline in which a specific technology was introduced. Especially successful
+refer to the newest version. This appraoch is meant to allow readers to better understand
+the historic timeline in which a specific technology was proposed or introduced. Especially successful
 IETF technologies will have newer RFC that updates such initial work.
 
 # Energy Saving: An Introduction
 
-Technologies that simply save energy compared to earlier/other alternatives are the
+Technologies that simply save energy compared to earlier or other alternatives are the
 broadest and most unspecific category. In this memo such an energy saving simply refers
 to energy savings in some unit of electricity, such as kWh and does not take other
-aspects into account.  See {{sustainability}} for more details.
+aspects of energy optimization into account.  See {{sustainability}} for more details.
 
 ## Digitization
 
-Digitization describes the transformation of processes from non or less digital with networking 
+Digitization describes the transformation of processes from non- or less digital with networking 
 to more digital with computer-networking. For comparable process results, the digitized option is often,
-but not always, less energy consuming. Consider for example energy consumption in the evolution of
+but not always, less energy-consuming. Consider, for example, the energy consumption in the evolution of
 messaging starting from postal mail and overs telegrams and various other historic form to 
-solutions including e-mail utilizing for example the IETF "Simple Mail Transport Protocol" (SMTP, {{RFC822}}),
+solutions including e-mail utilizing, for example, the IETF "Simple Mail Transport Protocol" (SMTP, {{RFC822}}),
 group communications utilizing the IETF "Network News Transport Protocol" (NNTP, {{RFC3977}}) or the almost
 infinite set of communication options built on top of the IETF "HyperText Transport Protocol" (HTTP, 
-{{RFC2086}} and successors) and IETF "HyperText Markup Language" (HTML, {{RFC1866}} and successors).
+{{RFC2086}} and successors), and IETF "HyperText Markup Language" (HTML, {{RFC1866}} and successors).
 
-Traditionally, digitization had only "incidental", but not "intentional" relationship to 
+Conventionally, digitization had only "incidental", but not "intentional" relationship to 
 energy consumption: If it saved energy, this was not only not a target benefit, it was not
 even recognized as one, until probably recently.  Instead, the evolution was driven from anything-but-energy benefits,
-but instead utility benefits such as improved speed, functionality/flexibility, accessibility, scalability
+but instead utility benefits such as improved speed, functionality/flexibility, accessibility, usability, scalability,
 and reduced cost.
 
 In hindsight though, digitization through IETF technologies and specifically the Internet
@@ -251,14 +251,14 @@ the whole stack of deployed protocols and operational practices that contributes
 digitization. It is likely also the biggest overall energy saving impact of all possible categories that
 relate IETF work to energy:
 
-The Internet as well as all other TCP/IP networks are likely the biggest energy saving development
+The Internet as well as all other IP/MPLS networks are likely the biggest energy saving development
 of the past few decades if only the energy consumption of equivalent services is compared. On the other hand,
 they are also the cause for the biggest new type of new energy consumption because of all the new services
 introduced in the past decades with the Internet and the hyper-scaling that the Internet affords them.
 
 ## Energy Saving Through Scale
 
-### An Example: Telephony
+### An Iconic Example: Telephony
 
 In most cases, energy saving through the use of IETF protocols compared to earlier (digitized or non digitized)
 solutions is purely a result of the reduction in the energy cost per bit over the decades in networking.
@@ -287,7 +287,7 @@ effectively.
 
 ### Global vs Restricted Connectivity: The Internet Routing Architectures
 
-The meshed peer-to-peer and transitive routing of the Internet enabled through the IETF "Border Gateway (Routing)
+The meshed peer-to-peer and transitive routing of the Internet enabled through the IETF Border Gateway (Routing)
 Protocol (BGP, {{RFC4271}} as well as predecessors) is another key factor to successful scalability, because it
 enabled competitive market forces to explore markets quickly. 
 
@@ -405,12 +405,12 @@ and the energy consumption it produces.
 
 # Some Notes on Sustainability {#sustainability}
 
-Sustainability is the principle to utilize resources in a way that they do not diminish or run out over the long term.
+Sustainability is the principle to utilize resources in a way that they do not diminish or run out over the long term (e.g., ore depletion required for building hardware).
 Beyond the above covered energy saving, sustainability relates with respect to the IETF specifically to the use of 
 renewable sources of energy to minimize exhaustion of fossile resources, and the impact of IETF technologies
 on global warming to avoid worsening living conditions on the planet.
 
-While there seems to be no IETF work specifically intending to target sustainability (TBD: did we miss anything ?), 
+While there seems to be no IETF work specifically intending to target sustainability, 
 the Internet itself can similarly to how it does for digitization play a key role in building sustainable
 networked IT infrastructures. The following subsections list three examples areas where global high performance,
 low-cost Internet networking is a key requirement.
@@ -427,21 +427,21 @@ dynamically (over time) migrate to a DC location with sufficient renewable energ
 (or large TCP/IP OTT backbone networks) will serve as the fabric to access the remote DC and
 to coordinate the instantiation/migration.
 
-## Minimize Generated Heat
+## Optimize Generated Heat
 
-The majority of energy in cloud DC is normally also wasted as exhaust heat, requiring even more energy
+The majority of energy in cloud DCs is normally also wasted as exhaust heat, requiring even more energy
 for cooling. The warmer the location, the more energy needs to be spent for cooling. For this
-reason, DC in cooler climates such as {{https://greenmountain.no/power-and-cooling/}} can help
+reason, DCs in cooler climates, such as {{https://greenmountain.no/power-and-cooling/}}, can help
 to reduce the overall DC energy consumption significantly (independent of the energy being
 consumed in the DC to be renewable itself). The Internet again plays the role of providing access
-to those type of DC whole location is not optimized for consumption but for sustainable generation
+to those type of DCs whole location is not optimized for consumption but for sustainable generation
 of compute and storage.
 
 ## Heat Recovery
 
-Exhaust heat, especially from compute in DC, can be recovered when it is coupled to heating systems
-ranging in size all the way from individual familys home through larger buildings (hotels etc.) all the
-way to district heating systems. A provider of such type of compute-generated heat as a service
+Exhaust heat, especially from compute in DCs, can be recovered when it is coupled to heating systems
+ranging in size all the way from individual familys home through larger buildings (hotels, for example) all the
+way to district heating systems. A provider of such a type of compute-generated heat as a service
 can sell the compute capacity as long as there is cost efficient network connectivity.  "Cloud & Heat"
 is an example company offering such infrastructures and services
 {{https://www.cloudandheat.com/wp-content/uploads/2020/02/2020_CloudHeat-Whitepaper-Cost-saving-Potential.pdf}}.
@@ -450,21 +450,21 @@ is an example company offering such infrastructures and services
 
 Telecollaboration has a long history in the IETF resulting in multiple core technologies over the decades.
 
-If one considers textual communications via email and netwnews (using e.g.: NNTP) as early forms of Telecollaboration,
+If one considers textual communications via email and netwnews (using e.g., NNTP) as early forms of Telecollaboration,
 then telecollaboration history through IETF technology reaches back into the 1980s and earlier.
 
-Around 1990, the IETF work on IP Multicast (e.g.{{RFC1112}} and later) enabled the first efficient forms
+Around 1990, the IETF work on IP Multicast (e.g. {{RFC1112}} and later) enabled the first efficient forms
 of audio/video group collaboration through an overlay network over the Internet called the MBone
 {{https://en.wikipedia.org/wiki/Mbone}} which was also used by the IETF for more than a decade to
 provide remote collaboration for its own (in-person + remote participation) meetings.
 
-With the advent of SIP in the early 2000, commercial telecollaboration started to be built most often on SIP based
+With the advent of SIP in the early 2000s, commercial telecollaboration started to be built most often on SIP based
 session and application protocols with multiple IETF working groups contributing to that protocol suite
 (TBD: how much more example/details should we have here). Using this technology and the Internet, the
 immersive nature of telecollaboration was brought to life-size video, was/is called Telepresence
 {{https://en.wikipedia.org/wiki/Telepresence}} and later to even more immersive forms such as AR/VR telecollaboration.
 
-In 2011, the IETF opened the "Real-Time Communication in WEB-browsers" (RTCWEB) WG, that towards the
+In 2011, the IETF opened the "Real-Time Communication in Web-browsers" (RTCWEB) WG, that towards the
 end of that decade became the most widely supported cross-platform standard for hundreds of commercial
 and free tele-collaboration solutions, including Cisco Webex, which is also used by the IETF itself, Zoom and
 the new IETF collaboration suite MeetEcho (TBD: good references here ?).
@@ -475,7 +475,7 @@ not based on simple comparison of energy, but nowadays by comparing their impact
 a key factor to sustainability.
 
 Telecollaboration was primarily developed because of the utility for the participants - to avoid travel
-for originally predominantly business communications/collaborations. It  saw an extreme increase in use 
+for originally predominantly business communications/collaborations. It saw an extreme increase in use 
 (TBD: references) in the Corona Crisis of 2019, when especially international travel was often prohibited,
 and often even working from an office. This forced millions of people to work from home and utilizing commercial
 telecollaboration tools. It equally caused most in-person events that where not cancelled to
@@ -512,7 +512,7 @@ in air travel.
 
 ## Low Power and Lossy Networks (LLN) {#LLN}
 
-Low Power and Lossy Networks are networks in which nodes and/or radio links have constraints.
+Low Power and Lossy Networks (LLNs) are networks in which nodes and/or radio links have constraints.
 Low power consumption constraints in nodes often originate from the need to operate nodes from
 as long as possible from battery and/or energy harvesting such as (today most commonly) solar panels
 associated with the node or ambient energy such as energy harvesting from movement for wearable nodes
@@ -530,7 +530,7 @@ to eliminate need of radio receivers to consume energy and so on. {{RFC8352}} gi
 overview, especially because different L2 technologies such as IEEE 802.15.4 type (low power)
 wireless networks, Bluetooth Low Energy (BLE), WiFi (IEEE 802.11) and DEC ULE. 
 
-In the INTernet area of the IETF, several LLN specific WGs exist(ed):
+In the INT area of the IETF, several LLN specific WGs exist(ed):
 
 ### 6LOWPAN WG
 
@@ -842,7 +842,7 @@ Most of the overview in this document is not specific to networks used for Smart
 Grid applications but just summarized in the document for the above described
 outreach and education to the community.  The aspects most specific to Smart Grids
 is the back in 2011 still somewhat in its infancy adaptation of IPv6 network
-technologies to LLN networks (see {{LLN}} below): smart meters, circuit breakers,
+technologies to LLN networks (see {{LLN}}): smart meters, circuit breakers,
 load measurement devices, car chargers and so on - all those devices would
 most likely be connected to the network via a low-power radio networks, which
 ideally would utilize IPv6 directly. Support for LLN networks with IPv6 has
@@ -983,7 +983,7 @@ There are currently no YANG equivalent modules. Such modules would not only
 be designed to echo the EMAN MIBs but would also allow to control dedicated
  power optimization engines instead of relying upon static and frozen vendor-specific optimization.
 
-# Power-awareness in Forwarding and Routing Protocols
+# Power-Awareness in Forwarding and Routing Protocols
 
 ## Power Aware Networks (PANET) {#PANET}
 
@@ -1086,10 +1086,6 @@ it suggests the IETF to work on: "Load-adaptive Resource Management",
 
 Some aspects for those areas of gaps where partially tackled by later work in the IETF, 
 but broadly speaking, most of those areas remain open to a wide range of possible further IETF/IRTF work.
-
-# Summary 
-
-TBD
 
 # Changelog
 
