@@ -157,6 +157,10 @@ informative:
   RFC9139:
   RFC6553:
   RFC6554:
+  RFC6551:
+  RFC6552:
+  RFC7731:
+  RFC8138:
 
 
   # some error in kramdown when not using -00 here:
@@ -660,7 +664,7 @@ has produced since 2008 23 RFC. Initially it produced requirement RFCs of differ
 {{RFC5826}} and building automation {{RFC5867}}.
 
  Since then its work is mostly focused
-on the "IPv6 Routing Protocol for Low-Power and Lossy Networks" (RPL) {{RFC6550}}, which
+on the "IPv6 Routing Protocol for Low-Power and Lossy Networks" (RPL) {{RFC6550}} {{RFC6551}} {{RFC6552}}, which
 is used in a wide variety of the above described IPv6 instances of LLN networks
 and which are discussed in two ROLL applicability statement RFCs,
  "Applicability Statement: The Use of the Routing Protocol for Low-Power and
@@ -669,14 +673,16 @@ Lossy Networks (RPL) Protocol Suite in Home Automation and Building Control" {{R
 Lossy Networks (RPL) in Advanced Metering Infrastructure (AMI) Networks"
 {{RFC8036}}. 
 Further, some RPL RFCs were progressed in the 6MAN WG, such as {{RFC6553}}, RPL Option for Carrying RPL Information in Data-Plane Datagrams, and {{RFC6554}}, IPv6 Routing Header for Source Routes with RPL.
+{{RFC7416}} covers a Security Threat Analysis for RPLs, which is also relevant to energy efforts.
 
 
 The ROLL WG also wrote a more generic RFC for LLN, "Terms Used in Routing for Low-Power and Lossy Networks" {{RFC7102}}.
 RPL has a highly configurable set of functions to support (energy) constrained networks. 
 Unconstrained root node(s), typically edge routers between the RPL network and a backbone network
 calculate "Destination-Oriented Directed Acyclic Graphs" (DODAG) and can use strict hop-by-hop
-source routing with dedicated IPv6 routing headers {{RFC9008}} to minimize constrained nodes
-routing related compute and memory requirements. "The Trickle Algorithm" {{RFC6206}} allows
+source routing with dedicated IPv6 routing headers {{RFC8138}} {{RFC9008}} to minimize constrained nodes
+routing related compute and memory requirements. 
+"The Trickle Algorithm" {{RFC6206}} allows
 to minimize routing related packets through automatic lazy updates. While RPL is naturally
 a mesh network routing protocol, where all nodes are usually expected to be able to
 participate in it, RPL also supports even more lightweight leave nodes {{RFC9010}}.
@@ -795,6 +801,9 @@ network technologies. Instead it is used (for data distribution) when the amount
 alternative (with so-called ingress replication) is not possible due to the total amount of
 traffic generated. This includes wireless/radio networks, where equally airtime is the limiting
 factor.
+
+As an additional pointer, {{RFC7731}} defined the Multicast Protocol for Low-Power and Lossy Networks (MPL).
+
 
 #### Power Waste Through Multicast-based Service Coordination {#coordination}
 
