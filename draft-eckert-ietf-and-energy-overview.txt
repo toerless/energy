@@ -10,6 +10,8 @@ Expires: 11 June 2024                                             Orange
                                                      Cisco Systems, Inc.
                                                              J. Tentsura
                                                                   NVIDIA
+                                                            C. Pignataro
+                                                     NC State University
                                                          9 December 2023
 
 
@@ -48,8 +50,6 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 June 2024.
-
 
 
 
@@ -57,6 +57,8 @@ Eckert, et al.            Expires 11 June 2024                  [Page 1]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   This Internet-Draft will expire on 11 June 2024.
 
 Copyright Notice
 
@@ -99,13 +101,11 @@ Table of Contents
        5.2.2.  LPWAN WG  . . . . . . . . . . . . . . . . . . . . . .  14
        5.2.3.  6TISCH WG . . . . . . . . . . . . . . . . . . . . . .  14
        5.2.4.  6LO WG  . . . . . . . . . . . . . . . . . . . . . . .  14
-       5.2.5.  ROLL WG . . . . . . . . . . . . . . . . . . . . . . .  14
+       5.2.5.  ROLL WG . . . . . . . . . . . . . . . . . . . . . . .  15
      5.3.  Constrained Nodes and Networks  . . . . . . . . . . . . .  16
        5.3.1.  LWIG WG . . . . . . . . . . . . . . . . . . . . . . .  16
        5.3.2.  CoRE and CoAP . . . . . . . . . . . . . . . . . . . .  16
        5.3.3.  Satellite Constellations  . . . . . . . . . . . . . .  17
-       5.3.4.  Devices with Batteries  . . . . . . . . . . . . . . .  17
-     5.4.  Sample Technical Enablers . . . . . . . . . . . . . . . .  17
 
 
 
@@ -114,6 +114,8 @@ Eckert, et al.            Expires 11 June 2024                  [Page 2]
 Internet-Draft            IETF Energy Overview             December 2023
 
 
+       5.3.4.  Devices with Batteries  . . . . . . . . . . . . . . .  17
+     5.4.  Sample Technical Enablers . . . . . . . . . . . . . . . .  17
        5.4.1.  (IP) Multicast  . . . . . . . . . . . . . . . . . . .  17
          5.4.1.1.  Power Saving with Multicast . . . . . . . . . . .  18
          5.4.1.2.  Power Waste Through Multicast-based Service
@@ -135,7 +137,7 @@ Internet-Draft            IETF Energy Overview             December 2023
    10. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  28
    11. Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  28
    12. Informative References  . . . . . . . . . . . . . . . . . . .  29
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  44
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  45
 
 1.  Introduction
 
@@ -158,10 +160,8 @@ Internet-Draft            IETF Energy Overview             December 2023
    proposed or introduced.  Especially successful IETF technologies will
    have newer RFC that updates such initial work.
 
-   This document captures work until 12/2022, at which time the "IAB
-   workshop on Environmental Impact of Internet Applications and
-   Systems" (https://www.iab.org/activities/workshops/e-impact/)
-   creaeted new interest and work in the topic.
+
+
 
 
 
@@ -169,6 +169,11 @@ Eckert, et al.            Expires 11 June 2024                  [Page 3]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   This document captures work until 12/2022, at which time the "IAB
+   workshop on Environmental Impact of Internet Applications and
+   Systems" (https://www.iab.org/activities/workshops/e-impact/)
+   creaeted new interest and work in the topic.
 
 2.  Energy Saving: An Introduction
 
@@ -211,11 +216,6 @@ Internet-Draft            IETF Energy Overview             December 2023
    operational practices that contributes to energy saving through
    digitization.  It is likely also the biggest overall energy saving
    impact of all possible categories that relate IETF work to energy:
-
-
-
-
-
 
 
 
@@ -717,11 +717,11 @@ Internet-Draft            IETF Energy Overview             December 2023
    procedures [RFC4949], compression of IPv6 (and transport) packet
    headers [RFC6282], modifications for neighbor discovery (ND)
    [RFC6775], as well as 3 informational RFCs about the WPAN space and
-   applying IPv6 to it.  "Transmission of IPv6 Packets over IEEE
-   802.15.4 Networks" [RFC4944], "Compression Format for IPv6 Datagrams
-   over IEEE 802.15.4-Based Networks" [RFC6282], "Neighbor Discovery
-   Optimization for IPv6 over Low-Power Wireless Personal Area Networks
-   (6LoWPANs)" [RFC6775] (6LOWPAN-ND).
+   applying IPv6 to it.  Among these, the Problem Statement and
+   Requirements [RFC6606] gives details about the power and energy
+   approaches and goals.
+
+
 
 
 
@@ -729,6 +729,15 @@ Eckert, et al.            Expires 11 June 2024                 [Page 13]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   "Transmission of IPv6 Packets over IEEE 802.15.4 Networks" [RFC4944],
+   "Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based
+   Networks" [RFC6282], "Neighbor Discovery Optimization for IPv6 over
+   Low-Power Wireless Personal Area Networks (6LoWPANs)" [RFC6775]
+   (6LOWPAN-ND).
+
+   It is important to understan the 6LOWPAN Overview, Assumptions,
+   Problem Statement, and Goals [RFC4919], including "conserve energy".
 
 5.2.2.  LPWAN WG
 
@@ -768,15 +777,6 @@ Internet-Draft            IETF Energy Overview             December 2023
    Finally, the 6LO WG also produced [RFC8105], IPv6 over DECT Ultra-Low
    Energy, and [RFC9354], IPv6 over Power Line Communication (PLC).
 
-5.2.5.  ROLL WG
-
-   In the RouTinG (RTG) area of the IETF, the "Routing Over Low power
-   and Lossy networks" (ROLL) WG has produced since 2008 23 RFC.
-   Initially it produced requirement RFCs of different type of "Low-
-   power and Lossy Networks": urban: [RFC5548], industrial [RFC5673],
-   home automation [RFC5826] and building automation [RFC5867].
-
-
 
 
 
@@ -785,6 +785,14 @@ Eckert, et al.            Expires 11 June 2024                 [Page 14]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+5.2.5.  ROLL WG
+
+   In the RouTinG (RTG) area of the IETF, the "Routing Over Low power
+   and Lossy networks" (ROLL) WG has produced since 2008 23 RFC.
+   Initially it produced requirement RFCs of different type of "Low-
+   power and Lossy Networks": urban: [RFC5548], industrial [RFC5673],
+   home automation [RFC5826] and building automation [RFC5867].
 
    Since then its work is mostly focused on the "IPv6 Routing Protocol
    for Low-Power and Lossy Networks" (RPL) [RFC6550], which is used in a
@@ -826,14 +834,6 @@ Internet-Draft            IETF Energy Overview             December 2023
    the so-called link-state "Interior Gateway routing Protocols" (IGP),
    such as most commonly used protocols ISIS ([RFC1142] superceeded by
    [ISO10589-Second-Edition]) and OSPF [RFC2328], RPL has also
-   proliferated into use-cases for non-constrained networks, for example
-   to support the largest possible networks automatically, such as in
-   [RFC8994].
-
-
-
-
-
 
 
 
@@ -841,6 +841,10 @@ Eckert, et al.            Expires 11 June 2024                 [Page 15]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   proliferated into use-cases for non-constrained networks, for example
+   to support the largest possible networks automatically, such as in
+   [RFC8994].
 
 5.3.  Constrained Nodes and Networks
 
@@ -886,10 +890,6 @@ Internet-Draft            IETF Energy Overview             December 2023
    "Object Security for Constrained RESTful Environments" (OSCORE),
    [RFC8613] is a further product of the CoRE WG providing a more
    message layer based, more lightweight security alternative to DTLS.
-
-
-
-
 
 
 
@@ -2050,6 +2050,12 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC4861, September 2007,
               <https://www.rfc-editor.org/rfc/rfc4861>.
 
+   [RFC4919]  Kushalnagar, N., Montenegro, G., and C. Schumacher, "IPv6
+              over Low-Power Wireless Personal Area Networks (6LoWPANs):
+              Overview, Assumptions, Problem Statement, and Goals",
+              RFC 4919, DOI 10.17487/RFC4919, August 2007,
+              <https://www.rfc-editor.org/rfc/rfc4919>.
+
    [RFC4944]  Montenegro, G., Kushalnagar, N., Hui, J., and D. Culler,
               "Transmission of IPv6 Packets over IEEE 802.15.4
               Networks", RFC 4944, DOI 10.17487/RFC4944, September 2007,
@@ -2059,12 +2065,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               FYI 36, RFC 4949, DOI 10.17487/RFC4949, August 2007,
               <https://www.rfc-editor.org/rfc/rfc4949>.
 
-   [RFC5246]  Dierks, T. and E. Rescorla, "The Transport Layer Security
-              (TLS) Protocol Version 1.2", RFC 5246,
-              DOI 10.17487/RFC5246, August 2008,
-              <https://www.rfc-editor.org/rfc/rfc5246>.
-
-
 
 
 
@@ -2073,6 +2073,11 @@ Eckert, et al.            Expires 11 June 2024                 [Page 37]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   [RFC5246]  Dierks, T. and E. Rescorla, "The Transport Layer Security
+              (TLS) Protocol Version 1.2", RFC 5246,
+              DOI 10.17487/RFC5246, August 2008,
+              <https://www.rfc-editor.org/rfc/rfc5246>.
 
    [RFC5322]  Resnick, P., Ed., "Internet Message Format", RFC 5322,
               DOI 10.17487/RFC5322, October 2008,
@@ -2116,12 +2121,7 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC6282, September 2011,
               <https://www.rfc-editor.org/rfc/rfc6282>.
 
-   [RFC6550]  Winter, T., Ed., Thubert, P., Ed., Brandt, A., Hui, J.,
-              Kelsey, R., Levis, P., Pister, K., Struik, R., Vasseur,
-              JP., and R. Alexander, "RPL: IPv6 Routing Protocol for
-              Low-Power and Lossy Networks", RFC 6550,
-              DOI 10.17487/RFC6550, March 2012,
-              <https://www.rfc-editor.org/rfc/rfc6550>.
+
 
 
 
@@ -2129,6 +2129,19 @@ Eckert, et al.            Expires 11 June 2024                 [Page 38]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   [RFC6550]  Winter, T., Ed., Thubert, P., Ed., Brandt, A., Hui, J.,
+              Kelsey, R., Levis, P., Pister, K., Struik, R., Vasseur,
+              JP., and R. Alexander, "RPL: IPv6 Routing Protocol for
+              Low-Power and Lossy Networks", RFC 6550,
+              DOI 10.17487/RFC6550, March 2012,
+              <https://www.rfc-editor.org/rfc/rfc6550>.
+
+   [RFC6606]  Kim, E., Kaspar, D., Gomez, C., and C. Bormann, "Problem
+              Statement and Requirements for IPv6 over Low-Power
+              Wireless Personal Area Network (6LoWPAN) Routing",
+              RFC 6606, DOI 10.17487/RFC6606, May 2012,
+              <https://www.rfc-editor.org/rfc/rfc6606>.
 
    [RFC6690]  Shelby, Z., "Constrained RESTful Environments (CoRE) Link
               Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
@@ -2164,6 +2177,15 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC7030, October 2013,
               <https://www.rfc-editor.org/rfc/rfc7030>.
 
+
+
+
+
+Eckert, et al.            Expires 11 June 2024                 [Page 39]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC7102]  Vasseur, JP., "Terms Used in Routing for Low-Power and
               Lossy Networks", RFC 7102, DOI 10.17487/RFC7102, January
               2014, <https://www.rfc-editor.org/rfc/rfc7102>.
@@ -2177,14 +2199,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               "Energy Management Framework", RFC 7326,
               DOI 10.17487/RFC7326, September 2014,
               <https://www.rfc-editor.org/rfc/rfc7326>.
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 39]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC7388]  Schoenwaelder, J., Sehgal, A., Tsou, T., and C. Zhou,
               "Definition of Managed Objects for IPv6 over Low-Power
@@ -2221,6 +2235,13 @@ Internet-Draft            IETF Energy Overview             December 2023
               Energy", RFC 7668, DOI 10.17487/RFC7668, October 2015,
               <https://www.rfc-editor.org/rfc/rfc7668>.
 
+
+
+Eckert, et al.            Expires 11 June 2024                 [Page 40]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC768]   Postel, J., "User Datagram Protocol", STD 6, RFC 768,
               DOI 10.17487/RFC0768, August 1980,
               <https://www.rfc-editor.org/rfc/rfc768>.
@@ -2231,16 +2252,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               Home Automation and Building Control", RFC 7733,
               DOI 10.17487/RFC7733, February 2016,
               <https://www.rfc-editor.org/rfc/rfc7733>.
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 40]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC7772]  Yourtchenko, A. and L. Colitti, "Reducing Energy
               Consumption of Router Advertisements", BCP 202, RFC 7772,
@@ -2277,6 +2288,16 @@ Internet-Draft            IETF Energy Overview             December 2023
               Networks", RFC 8036, DOI 10.17487/RFC8036, January 2017,
               <https://www.rfc-editor.org/rfc/rfc8036>.
 
+
+
+
+
+
+Eckert, et al.            Expires 11 June 2024                 [Page 41]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC8105]  Mariager, P., Petersen, J., Ed., Shelby, Z., Van de Logt,
               M., and D. Barthel, "Transmission of IPv6 Packets over
               Digital Enhanced Cordless Telecommunications (DECT) Ultra
@@ -2287,16 +2308,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               (IPv6) Specification", STD 86, RFC 8200,
               DOI 10.17487/RFC8200, July 2017,
               <https://www.rfc-editor.org/rfc/rfc8200>.
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 41]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC822]   Crocker, D., "STANDARD FOR THE FORMAT OF ARPA INTERNET
               TEXT MESSAGES", STD 11, RFC 822, DOI 10.17487/RFC0822,
@@ -2333,6 +2344,16 @@ Internet-Draft            IETF Energy Overview             December 2023
               RFC 8575, DOI 10.17487/RFC8575, May 2019,
               <https://www.rfc-editor.org/rfc/rfc8575>.
 
+
+
+
+
+
+Eckert, et al.            Expires 11 June 2024                 [Page 42]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC8613]  Selander, G., Mattsson, J., Palombini, F., and L. Seitz,
               "Object Security for Constrained RESTful Environments
               (OSCORE)", RFC 8613, DOI 10.17487/RFC8613, July 2019,
@@ -2343,16 +2364,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               Compression and Fragmentation", RFC 8724,
               DOI 10.17487/RFC8724, April 2020,
               <https://www.rfc-editor.org/rfc/rfc8724>.
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 42]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC8815]  Abrahamsson, M., Chown, T., Giuliano, L., and T. Eckert,
               "Deprecating Any-Source Multicast (ASM) for Interdomain
@@ -2391,6 +2402,14 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC9008, April 2021,
               <https://www.rfc-editor.org/rfc/rfc9008>.
 
+
+
+
+Eckert, et al.            Expires 11 June 2024                 [Page 43]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC9010]  Thubert, P., Ed. and M. Richardson, "Routing for RPL
               (Routing Protocol for Low-Power and Lossy Networks)
               Leaves", RFC 9010, DOI 10.17487/RFC9010, April 2021,
@@ -2400,15 +2419,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               Header Compression and Fragmentation (SCHC) over LoRaWAN",
               RFC 9011, DOI 10.17487/RFC9011, April 2021,
               <https://www.rfc-editor.org/rfc/rfc9011>.
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 43]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC9034]  Thomas, L., Anamalamudi, S., Anand, S.V.R., Hegde, M., and
               C. Perkins, "Packet Delivery Deadline Time in the Routing
@@ -2449,6 +2459,13 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC9354, January 2023,
               <https://www.rfc-editor.org/rfc/rfc9354>.
 
+
+
+Eckert, et al.            Expires 11 June 2024                 [Page 44]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [VC2014]   Ong, D., Moors, T., and V. Sivaraman, "Comparison of the
               energy, carbon and time costs of videoconferencing and in-
               person meetings", DOI 10.1016/j.comcom.2014.02.009, 2014,
@@ -2456,15 +2473,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               S0140366414000620>.
 
 Authors' Addresses
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 44]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    Toerless Eckert (editor)
    Futurewei Technologies USA
@@ -2496,18 +2504,10 @@ Internet-Draft            IETF Energy Overview             December 2023
    Email: jefftant.ietf@gmail.com
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+   Carlos Pignataro
+   NC State University
+   United States of America
+   Email: cpignata@gmail.com, cmpignat@ncsu.edu
 
 
 
