@@ -741,10 +741,10 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 5.2.2.  LPWAN WG
 
-   Since 2014, the "IPv6 over Low Power Wide-Area Networks" (LPWAN) WG
-   has produced 4 RFC for low-power wide area networks, such as LoRaWAN
-   https://en.wikipedia.org/wiki/LoRa, with three Internet RFC
-   documents, [RFC8724], [RFC8824], [RFC9011].
+   Since 2014 and before 2023, the "IPv6 over Low Power Wide-Area
+   Networks" (LPWAN) WG has produced 4 RFC for low-power wide area
+   networks, such as LoRaWAN https://en.wikipedia.org/wiki/LoRa, with
+   three Standards-Track RFC documents, [RFC8724], [RFC8824], [RFC9011].
 
 5.2.3.  6TISCH WG
 
@@ -1364,7 +1364,10 @@ Internet-Draft            IETF Energy Overview             December 2023
    power failure based on UPS battery capacity and device consumptions/
    priorities.  Similarly, the EMAN "Definition of Managed Objects for
    Battery Monitoring" [RFC7577] defines objects to support battery
-   monitoring in managed devices.
+   monitoring in managed devices.  It is important to note that, outside
+   the EMAN WG and as an Independent Submission, [RFC9271] specifies
+   "Uninterruptible Power Supply (UPS) Management Protocol -- Commands
+   and Responses".
 
    The pre-existing IETF "Entity State MIB" (ENTITY-STATE-MIB) [RFC4268]
    allows to specify the operational state of entities specified via the
@@ -1391,9 +1394,6 @@ Internet-Draft            IETF Energy Overview             December 2023
    support as well as how it could/can link to a variety of pre-
    existing, non-IETF standards relevant for power management.  Such
    intended applicability includes home, core, and DC networks.
-
-
-
 
 
 
@@ -2453,11 +2453,11 @@ Internet-Draft            IETF Energy Overview             December 2023
               for Cellular Networks", RFC 9178, DOI 10.17487/RFC9178,
               May 2022, <https://www.rfc-editor.org/rfc/rfc9178>.
 
-   [RFC9354]  Hou, J., Liu, B., Hong, Y., Tang, X., and C. Perkins,
-              "Transmission of IPv6 Packets over Power Line
-              Communication (PLC) Networks", RFC 9354,
-              DOI 10.17487/RFC9354, January 2023,
-              <https://www.rfc-editor.org/rfc/rfc9354>.
+   [RFC9271]  Price, R., Ed., "Uninterruptible Power Supply (UPS)
+              Management Protocol -- Commands and Responses", RFC 9271,
+              DOI 10.17487/RFC9271, August 2022,
+              <https://www.rfc-editor.org/rfc/rfc9271>.
+
 
 
 
@@ -2465,6 +2465,12 @@ Eckert, et al.            Expires 11 June 2024                 [Page 44]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   [RFC9354]  Hou, J., Liu, B., Hong, Y., Tang, X., and C. Perkins,
+              "Transmission of IPv6 Packets over Power Line
+              Communication (PLC) Networks", RFC 9354,
+              DOI 10.17487/RFC9354, January 2023,
+              <https://www.rfc-editor.org/rfc/rfc9354>.
 
    [VC2014]   Ong, D., Moors, T., and V. Sivaraman, "Comparison of the
               energy, carbon and time costs of videoconferencing and in-
@@ -2508,12 +2514,6 @@ Authors' Addresses
    NC State University
    United States of America
    Email: cpignata@gmail.com, cmpignat@ncsu.edu
-
-
-
-
-
-
 
 
 
