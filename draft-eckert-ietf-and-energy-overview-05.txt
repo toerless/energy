@@ -1655,19 +1655,19 @@ Internet-Draft            IETF Energy Overview                 July 2023
               giacomin-core-sleepy-option-00>.
 
    [I-D.ietf-core-coap-pubsub]
-              Jimenez, J., Koster, M., and A. Keränen, "A publish-
+              Koster, M., Keränen, A., and J. Jimenez, "A publish-
               subscribe architecture for the Constrained Application
               Protocol (CoAP)", Work in Progress, Internet-Draft, draft-
-              ietf-core-coap-pubsub-13, 20 October 2023,
+              ietf-core-coap-pubsub-12, 13 March 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-core-
-              coap-pubsub-13>.
+              coap-pubsub-12>.
 
    [I-D.ietf-dnssd-srp]
               Lemon, T. and S. Cheshire, "Service Registration Protocol
               for DNS-Based Service Discovery", Work in Progress,
-              Internet-Draft, draft-ietf-dnssd-srp-23, 4 August 2023,
+              Internet-Draft, draft-ietf-dnssd-srp-21, 7 July 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-dnssd-
-              srp-23>.
+              srp-21>.
 
 
 
@@ -1801,9 +1801,9 @@ Internet-Draft            IETF Energy Overview                 July 2023
    [I-D.retana-rtgwg-eacp]
               Retana, A., White, R., and M. Paul, "A Framework for
               Energy Aware Control Planes", Work in Progress, Internet-
-              Draft, draft-retana-rtgwg-eacp-07, 24 August 2023,
+              Draft, draft-retana-rtgwg-eacp-06, 22 February 2023,
               <https://datatracker.ietf.org/doc/html/draft-retana-rtgwg-
-              eacp-07>.
+              eacp-06>.
 
    [I-D.suzuki-eens-requirements]
               Suzuki, T. and T. Tarui, "Requirements for an Energy-
