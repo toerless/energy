@@ -3,7 +3,7 @@ coding: utf-8
 
 title: An Overview of Energy-related Effort within the IETF 
 abbrev: IETF Energy Overview
-docname: draft-eckert-ietf-and-energy-overview-04
+docname: draft-eckert-ietf-and-energy-overview-05
 stream: independent
 category: info
 ipr: trust200902
@@ -164,6 +164,9 @@ informative:
   I-D.lhan-problems-requirements-satellite-net:
   I-D.ietf-tcpm-rfc793bis:
   I-D.desmouceaux-ipv6-mcast-wifi-power-usage:
+  I-D.ietf-roll-protocols-survey:
+  I-D.levis-roll-overview-protocols:
+  I-D.thubert-6man-ipv6-over-wireless:
 
   ISO10589-Second-Edition:
     title: "Intermediate system to Intermediate system intra-domain routeing information exchange protocol for use in conjunction with the protocol for providing the connectionless-mode Network Service (ISO 8473)"
@@ -217,6 +220,8 @@ interested in it, in the hope to raise more interest in energy-related
 activities within the IETF, such as identifying gaps and investigating
 solutions as appropriate.
 
+This document captures work until 12/2022, at which time the "IAB workshop on Environmental Impact of Internet Applications and Systems" (https://www.iab.org/activities/workshops/e-impact/) creaeted new interest and work in the topic. 
+
 --- middle
 
 # Introduction
@@ -237,6 +242,10 @@ as opposed to the newest. This is contrary to the common practice in IETF docume
 refer to the newest version. This appraoch is meant to allow readers to better understand
 the historic timeline in which a specific technology was proposed or introduced. Especially successful
 IETF technologies will have newer RFC that updates such initial work.
+
+
+This document captures work until 12/2022, at which time the "IAB workshop on Environmental Impact of Internet Applications and Systems" (https://www.iab.org/activities/workshops/e-impact/) creaeted new interest and work in the topic. 
+
 
 # Energy Saving: An Introduction
 
@@ -529,6 +538,21 @@ that replaces air travel because of the even higher global warming impact of usi
 in air travel.
 
 # Energy Optimization in Specific Networks
+
+## Analysis of routing protocol (in)efficiencies
+
+At the beginning of much of the following IETF efforts was an  
+     understanding and analysis that prior protocols for routing and  
+     subnet management where not able to ideally support evolving network 
+     and device models: - lower compute performance due to low energy 
+     (batteries, energy recovery), bitrates especially on radio links, and  
+     lower memory footprint.  
+    
+The two documents from 2008/2009 that capture this analysis/ 
+     understanding ar and {{I-D.levis-roll-overview-protocols}} and 
+     {{I-D.ietf-roll-protocols-survey}}.  The overall challenges also very  
+     much related to energy of IPv6 over wireless are captured in 
+     {{I-D.thubert-6man-ipv6-over-wireless}}, which is ongoing work.  
 
 ## Low Power and Lossy Networks (LLN) {#LLN}
 
@@ -1128,3 +1152,6 @@ submit Issues and/or Pull-requests for proposed changes or join the team of auth
 03: Aded Jeff Tentsura as co-author
 
 04: Various textual fixups, added new versions of RFC for references using obsoleted RFCs, so that both original and latest are referenced.
+
+05: Added pointers on analysis and limit scope of dociument to 12/2022. 
+
