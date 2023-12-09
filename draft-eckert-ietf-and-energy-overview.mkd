@@ -155,6 +155,8 @@ informative:
   RFC6606:
   RFC9271:
   RFC9139:
+  RFC6553:
+  RFC6554:
 
 
   # some error in kramdown when not using -00 here:
@@ -666,7 +668,7 @@ Lossy Networks (RPL) Protocol Suite in Home Automation and Building Control" {{R
 "Applicability Statement for the Routing Protocol for Low-Power and
 Lossy Networks (RPL) in Advanced Metering Infrastructure (AMI) Networks"
 {{RFC8036}}. 
-Further, some RPL RFCs were progressed in the 6MAN WG, such as {{RFC6553}}, RPL Option for Carrying RPL Information in Data-Plane Datagrams, and {{RFC 6554}}, IPv6 Routing Header for Source Routes with RPL.
+Further, some RPL RFCs were progressed in the 6MAN WG, such as {{RFC6553}}, RPL Option for Carrying RPL Information in Data-Plane Datagrams, and {{RFC6554}}, IPv6 Routing Header for Source Routes with RPL.
 
 
 The ROLL WG also wrote a more generic RFC for LLN, "Terms Used in Routing for Low-Power and Lossy Networks" {{RFC7102}}.
