@@ -3,7 +3,7 @@ coding: utf-8
 
 title: An Overview of Energy-related Effort within the IETF 
 abbrev: IETF Energy Overview
-docname: draft-eckert-ietf-and-energy-overview-05
+docname: draft-eckert-ietf-and-energy-overview-06
 stream: independent
 category: info
 ipr: trust200902
@@ -129,6 +129,20 @@ informative:
   RFC9148:
   RFC9176:
   RFC9178:
+  RFC9006:
+  RFC7228:
+  RFC7388:
+  RFC8928:
+  RFC8505:
+  RFC8025:
+  RFC9159:
+  RFC7668:
+  RFC8105:
+  RFC8931:
+  RFC9034:
+  RFC9354:
+  RFC7973:
+
 
   # some error in kramdown when not using -00 here:
   I-D.ajunior-energy-awareness-00:
@@ -310,7 +324,7 @@ to support this scaling.
 
 At the core of scalability, even up to now, is the lightweight per-packet-processing enabled through
 end-to-end congestion loss management architecture as embodied through the IETF "Transmission Control Protocol"
-(TCP, {{RFC793}} and successors, e.g. {{I-D.ietf-tcpm-rfc793bis}}). This model eliminated more expensive per-hop, per-packet processing, such as
+(TCP, {{RFC793}} and successors, e.g., {{I-D.ietf-tcpm-rfc793bis}}). This model eliminated more expensive per-hop, per-packet processing, such as
 would be required for reliable hop-by-hop forwarding through per-hop ARQ, which was key to scaling routers cost
 effectively.
 
@@ -372,7 +386,7 @@ convergence for IoT and industrial markets.
 
 #### DiffServ
 
-Due to the much higher per-packet processing overhead of INTSERV versus standard (so-called Best-Effort)
+Due to the much higher per-packet processing overhead of INTSERV versus regular (so-called Best-Effort)
 Internet traffic, the INTSERV model was already recognized in the 1990s to not support highest-scale at lowest
 cost, leading to the parallel development of the IETF "Differentiated Services WG" (DIFFSERV) model
 defined in {{RFC2475}}. This has since then become the dominant technology to support multiplexing of
@@ -482,7 +496,7 @@ Telecollaboration has a long history in the IETF resulting in multiple core tech
 If one considers textual communications via email and netwnews (using e.g., NNTP) as early forms of Telecollaboration,
 then telecollaboration history through IETF technology reaches back into the 1980s and earlier.
 
-Around 1990, the IETF work on IP Multicast (e.g. {{RFC1112}} and later) enabled the first efficient forms
+Around 1990, the IETF work on IP Multicast (e.g., {{RFC1112}} and later) enabled the first efficient forms
 of audio/video group collaboration through an overlay network over the Internet called the MBone
 {{https://en.wikipedia.org/wiki/Mbone}} which was also used by the IETF for more than a decade to
 provide remote collaboration for its own (in-person + remote participation) meetings.
@@ -494,7 +508,7 @@ immersive nature of telecollaboration was brought to life-size video, was/is cal
 {{https://en.wikipedia.org/wiki/Telepresence}} and later to even more immersive forms such as AR/VR telecollaboration.
 
 In 2011, the IETF opened the "Real-Time Communication in Web-browsers" (RTCWEB) WG, that towards the
-end of that decade became the most widely supported cross-platform standard for hundreds of commercial
+end of that decade became the most widely supported cross-platform reference for hundreds of commercial
 and free tele-collaboration solutions, including Cisco Webex, which is also used by the IETF itself, Zoom and
 the new IETF collaboration suite MeetEcho (TBD: good references here ?).
 
@@ -590,7 +604,7 @@ about the WPAN space and applying IPv6 to it.  "Transmission of IPv6 Packets ove
 
 Since 2014, the "IPv6 over Low Power Wide-Area Networks" (LPWAN) WG has produced 4 RFC
 for low-power wide area networks, such as LoRaWAN {{https://en.wikipedia.org/wiki/LoRa}},
-with three standards, {{RFC8724}}, {{RFC8824}}, {{RFC9011}}.
+with three Internet RFC documents, {{RFC8724}}, {{RFC8824}}, {{RFC9011}}.
 
 ### 6TISCH WG
 
@@ -607,6 +621,13 @@ the work of 6lowpan for LLN in general, producing 17 RFC for IPv6-over-l2foo ada
 specifications, information models, cross-adaptation layer specification (such as header
 specifications) and maintenance and informational documents for other pre-existing IETF
 work in this space. 
+
+Notably, a key specification produced is {{RFC7668}}, "IPv6 over BLUETOOTH(R) Low Energy", using IPv6 over Low-power Wireless Personal Area Network (6LoWPAN) techniques, as well as the related {{RFC9159}} for the formation of extended topologies, an IPv6 mesh over Bluetooth LE links.
+
+From a management perspective, produced {{RFC7388}}, LOWPAN MIB, as well as several specific improvements around power such as {{RFC7973}}, {{RFC8025}}, {{RFC8928}}, {{RFC8931}}, and {{RFC9034}}.
+
+Finally, the 6LO WG also produced {{RFC8105}}, IPv6 over DECT Ultra-Low Energy, and {{RFC9354}}, IPv6 over Power Line Communication (PLC).
+
 
 ### ROLL WG
 
@@ -666,6 +687,10 @@ efficient network implementations via lightweight nodes/links,  but it also
 addressed the topic explicitly including via the aforementioned {{RFC8352}} and {{RFC9178}},
 "Building Power-Efficient Constrained Application Protocol (CoAP) Devices for Cellular Networks".
 
+Further, the LWIG WG produced {{RFC7228}}, "Terminology for Constrained-Node Networks", which includes important energy and power definitions of terms. These include scaling properties, classes of energy limitation, and strategies for using power for communication.  It also produced {{RFC9006}}, giving guidance on TCP usage for saving energy.
+
+
+
 ### CoRE and CoAP
 
 In the APPlication (APP) area of the IETF, the "Constrained RESTful Environments" (core) WG
@@ -680,7 +705,7 @@ functions with more compact on-the-wire/radio encoding than its unconstrained al
 product of the CoRE WG providing a more message layer based, more lightweight security
 alternative to DTLS.
 
-While originally designed for LLN, CoAP is transcending LLN and equally becoming standards
+While originally designed for LLN, CoAP is transcending LLN and equally becoming ubicuitous
 in unconstrained environments such as wired/ethernet industrial Machine 2 Machine (M2M) communications,
 because of simplicity, flexibility and relying on the single set of protocols supporting the widest
 range of deployment scenarios. 
@@ -722,7 +747,7 @@ state in the network rather than relying on heuristics.
 #### Power Saving with Multicast
 
 IP Multicast was introduced with {{RFC1112}} and today also called "Any Source Multicast" (ASM)
-has various protocols standardized in the IETF across multiple working groups. There are also
+has various protocols go through the standardization process in the IETF across multiple working groups. There are also
 MPLS and BIER multicast protocols from the IETF developed in the equally named WGs.
 
 These three, network layer multicast technologies can be a power saving technologies when used to
@@ -771,7 +796,7 @@ is an LLN network where the forwarders themselves are power constrained and for 
 multicasting of such coordination packets wastes energy on those forwarders as well - compared
 to better alternatives.
 
-In 2006, the IETF standardized "Source Specific Multicast" (SSM) {{RFC4607}}, a variation of IP Multicast
+In 2006, the IETF published "Source Specific Multicast" (SSM) {{RFC4607}}, a variation of IP Multicast
 that does not allow to perform these type of coordination functions but is only meant for
 (and useable for) actual data distribution. SSM was introduced for other reasons than the
 above-described power related issues though, but deprecating the use of ASM is one way to
@@ -836,8 +861,8 @@ such as the address(es) of DNS-SD server(s).
 
 "Building Power-Efficient Constrained Application Protocol (CoAP) Devices for Cellular Networks"  {{RFC9178}}
 discusses sleepy devices, especially the use of CoAP PubSub {{I-D.ietf-core-coap-pubsub}} as a
-mechanism to build proxies for sleepy devices. "Sensor Measurement Lists (SenML)", Standardized
-proxy infrastructures are best built with standard data models, such as "Sensor Measurement Lists" (SenML)
+mechanism to build proxies for sleepy devices. "Sensor Measurement Lists (SenML)", normalized
+proxy infrastructures are best built with published data models, such as "Sensor Measurement Lists" (SenML)
 {{RFC8428}} for sensors, likely the largest number of sleepy devices, especially in LLN.
 
 "Reducing Energy Consumption of Router Advertisements", {{RFC7772}} eliminates/reduces the
@@ -846,7 +871,7 @@ giving recommends for replacing multicast "Router Advertisement" (RA) messages w
 directed unicast versions, therefore not waking up sleepy nodes (with an IP multicast RA message).
 This was already allowed in ND {{RFC4861}}, but not recommended as the default. Note that
 {{RFC7772}} does not provide all the energy related optimizations of ND as developed by 
-6LoWPAN through {{RFC6775}}. {{I-D.chakrabarti-nordmark-energy-aware-nd}} proposes generalizations
+6LoWPAN through {{RFC6775}}, later updated by {{RFC8505}} is 6LO. {{I-D.chakrabarti-nordmark-energy-aware-nd}} proposes generalizations
 for those applications for to all IPv6 links, but was not further pursued by the IETF so far.
 
 ## (Lack of) Power Benchmarking Proposals
@@ -952,7 +977,7 @@ managed equipment consumption of power.
 While the IETF did specify a few MIBs with aspects related to of power management,
 it was only with the formation of the "Energy Management" (EMAN) WG
 which ran from 2010 to 2015 and released 7 RFC,
-that the IETF produced a comprehensive set of MIB based standards for
+that the IETF produced a comprehensive set of MIB based publications for
 managing energy/power for network equipment and associated devices 
 and integrated prior scattered power management related work
 in the IETF.
@@ -1079,7 +1104,7 @@ of forwarding elements:
 
 Energy-efficient Forwarding:  An important effort was made in the
 past to optimize the energy consumption of network elements.
-However, such optimization is node-specific and no standard means
+However, such optimization is node-specific and no standardized means
 to optimize the energy consumption at the scale of the network
 have been defined.  For example, many nodes (also, service cards)
 are deployed as backups.
