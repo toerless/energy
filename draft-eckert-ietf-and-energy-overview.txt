@@ -5,14 +5,14 @@
 Network Working Group                                     T. Eckert, Ed.
 Internet-Draft                                Futurewei Technologies USA
 Intended status: Informational                         M. Boucadair, Ed.
-Expires: 11 June 2024                                             Orange
+Expires: 13 June 2024                                             Orange
                                                               P. Thubert
                                                      Cisco Systems, Inc.
                                                              J. Tentsura
                                                                   NVIDIA
                                                             C. Pignataro
                                                      NC State University
-                                                         9 December 2023
+                                                        11 December 2023
 
 
           An Overview of Energy-related Effort within the IETF
@@ -32,8 +32,8 @@ Abstract
 
    This document captures work until 12/2022, at which time the "IAB
    workshop on Environmental Impact of Internet Applications and
-   Systems" (https://www.iab.org/activities/workshops/e-impact/) created
-   new interest and work in the topic.
+   Systems" revived interest and triggered new work in the topic within
+   the IETF/IRTF.
 
 Status of This Memo
 
@@ -53,12 +53,12 @@ Status of This Memo
 
 
 
-Eckert, et al.            Expires 11 June 2024                  [Page 1]
+Eckert, et al.            Expires 13 June 2024                  [Page 1]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
 
-   This Internet-Draft will expire on 11 June 2024.
+   This Internet-Draft will expire on 13 June 2024.
 
 Copyright Notice
 
@@ -95,7 +95,7 @@ Table of Contents
      4.3.  Heat Recovery . . . . . . . . . . . . . . . . . . . . . .  10
      4.4.  Telecollaboration . . . . . . . . . . . . . . . . . . . .  10
    5.  Energy Optimization in Specific Networks  . . . . . . . . . .  12
-     5.1.  Analysis of routing protocol (in)efficiencies . . . . . .  12
+     5.1.  Analysis of Routing Protocol (In)Efficiencies . . . . . .  12
      5.2.  Low Power and Lossy Networks (LLN)  . . . . . . . . . . .  12
        5.2.1.  6LOWPAN WG  . . . . . . . . . . . . . . . . . . . . .  13
        5.2.2.  LPWAN WG  . . . . . . . . . . . . . . . . . . . . . .  14
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Eckert, et al.            Expires 11 June 2024                  [Page 2]
+Eckert, et al.            Expires 13 June 2024                  [Page 2]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -137,7 +137,7 @@ Internet-Draft            IETF Energy Overview             December 2023
    10. Acknowledgments . . . . . . . . . . . . . . . . . . . . . . .  29
    11. Changelog . . . . . . . . . . . . . . . . . . . . . . . . . .  29
    12. Informative References  . . . . . . . . . . . . . . . . . . .  30
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  46
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  47
 
 1.  Introduction
 
@@ -165,15 +165,16 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                  [Page 3]
+Eckert, et al.            Expires 13 June 2024                  [Page 3]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
 
    This document captures work until 12/2022, at which time the "IAB
    workshop on Environmental Impact of Internet Applications and
-   Systems" (https://www.iab.org/activities/workshops/e-impact/) created
-   new interest and work in the topic.
+   Systems" [I-D.iab-ws-environmental-impacts-report] revived interest
+   and highlighted the need for some structured activity within the
+   IETF/IRTF.
 
 2.  Energy Saving: An Introduction
 
@@ -220,8 +221,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-
-Eckert, et al.            Expires 11 June 2024                  [Page 4]
+Eckert, et al.            Expires 13 June 2024                  [Page 4]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -269,15 +269,15 @@ Internet-Draft            IETF Energy Overview             December 2023
    At the core of scalability, even up to now, is the lightweight per-
    packet-processing enabled through end-to-end congestion loss
    management architecture as embodied through the IETF "Transmission
-   Control Protocol" (TCP, [RFC793] and successors, e.g.,
-   [I-D.ietf-tcpm-rfc793bis]).  This model eliminated more expensive
-   per-hop, per-packet processing, such as would be required for
-   reliable hop-by-hop forwarding through per-hop ARQ, which was key to
-   scaling routers cost effectively.
+   Control Protocol" (TCP, [RFC9293]).  This model eliminated more
+   expensive per-hop, per-packet processing, such as would be required
+   for reliable hop-by-hop forwarding through per-hop ARQ, which was key
+   to scaling routers cost effectively.
 
 
 
-Eckert, et al.            Expires 11 June 2024                  [Page 5]
+
+Eckert, et al.            Expires 13 June 2024                  [Page 5]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -333,7 +333,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                  [Page 6]
+Eckert, et al.            Expires 13 June 2024                  [Page 6]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -389,7 +389,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                  [Page 7]
+Eckert, et al.            Expires 13 June 2024                  [Page 7]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -445,7 +445,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                  [Page 8]
+Eckert, et al.            Expires 13 June 2024                  [Page 8]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -501,7 +501,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                  [Page 9]
+Eckert, et al.            Expires 13 June 2024                  [Page 9]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -557,7 +557,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 10]
+Eckert, et al.            Expires 13 June 2024                 [Page 10]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -613,7 +613,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 11]
+Eckert, et al.            Expires 13 June 2024                 [Page 11]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -638,7 +638,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 5.  Energy Optimization in Specific Networks
 
-5.1.  Analysis of routing protocol (in)efficiencies
+5.1.  Analysis of Routing Protocol (In)Efficiencies
 
    At the beginning of much of the following IETF efforts was an
    understanding and analysis that prior protocols for routing and
@@ -669,7 +669,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 12]
+Eckert, et al.            Expires 13 June 2024                 [Page 12]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -688,7 +688,7 @@ Internet-Draft            IETF Energy Overview             December 2023
    radio receivers to consume energy and so on.  [RFC8352] gives a more
    detailed overview, especially because different L2 technologies such
    as IEEE 802.15.4 type (low power) wireless networks, Bluetooth Low
-   Energy (BLE), Wi-Fi (IEEE 802.11) and DEC ULE.
+   Energy (BLE), WLAN (IEEE 802.11) and DEC ULE.
 
    In the INT area of the IETF, several LLN specific WGs exist(ed):
 
@@ -725,7 +725,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 13]
+Eckert, et al.            Expires 13 June 2024                 [Page 13]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -735,7 +735,8 @@ Internet-Draft            IETF Energy Overview             December 2023
    Since 2014 and before 2023, the "IPv6 over Low Power Wide-Area
    Networks" (LPWAN) WG has produced 4 RFC for low-power wide area
    networks, such as LoRaWAN https://en.wikipedia.org/wiki/LoRa, with
-   three Standards-Track RFC documents, [RFC8724], [RFC8824], [RFC9011].
+   three Standards-Track RFC documents, [RFC8724], [RFC8824], and
+   [RFC9011].
 
 5.2.3.  6TISCH WG
 
@@ -780,8 +781,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-
-Eckert, et al.            Expires 11 June 2024                 [Page 14]
+Eckert, et al.            Expires 13 June 2024                 [Page 14]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -837,7 +837,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 15]
+Eckert, et al.            Expires 13 June 2024                 [Page 15]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -893,7 +893,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 16]
+Eckert, et al.            Expires 13 June 2024                 [Page 16]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -949,7 +949,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 17]
+Eckert, et al.            Expires 13 June 2024                 [Page 17]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1005,7 +1005,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 18]
+Eckert, et al.            Expires 13 June 2024                 [Page 18]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1061,7 +1061,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 19]
+Eckert, et al.            Expires 13 June 2024                 [Page 19]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1117,7 +1117,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 20]
+Eckert, et al.            Expires 13 June 2024                 [Page 20]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1173,7 +1173,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 21]
+Eckert, et al.            Expires 13 June 2024                 [Page 21]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1229,7 +1229,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 22]
+Eckert, et al.            Expires 13 June 2024                 [Page 22]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1285,7 +1285,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 23]
+Eckert, et al.            Expires 13 June 2024                 [Page 23]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1341,7 +1341,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 24]
+Eckert, et al.            Expires 13 June 2024                 [Page 24]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1397,7 +1397,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 25]
+Eckert, et al.            Expires 13 June 2024                 [Page 25]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1453,7 +1453,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 26]
+Eckert, et al.            Expires 13 June 2024                 [Page 26]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1509,7 +1509,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 27]
+Eckert, et al.            Expires 13 June 2024                 [Page 27]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1565,7 +1565,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 28]
+Eckert, et al.            Expires 13 June 2024                 [Page 28]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1621,7 +1621,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 29]
+Eckert, et al.            Expires 13 June 2024                 [Page 29]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1677,7 +1677,7 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-Eckert, et al.            Expires 11 June 2024                 [Page 30]
+Eckert, et al.            Expires 13 June 2024                 [Page 30]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
@@ -1721,6 +1721,23 @@ Internet-Draft            IETF Energy Overview             December 2023
               2012, <https://datatracker.ietf.org/doc/html/draft-
               giacomin-core-sleepy-option-00>.
 
+   [I-D.iab-ws-environmental-impacts-report]
+              Arkko, J., Perkins, C., and S. Krishnan, "Report from the
+              IAB Workshop on Environmental Impact of Internet
+              Applications and Systems, 2022", Work in Progress,
+              Internet-Draft, draft-iab-ws-environmental-impacts-report-
+              03, 23 October 2023,
+              <https://datatracker.ietf.org/doc/html/draft-iab-ws-
+              environmental-impacts-report-03>.
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 31]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [I-D.ietf-core-coap-pubsub]
               Jimenez, J., Koster, M., and A. Keränen, "A publish-
               subscribe architecture for the Constrained Application
@@ -1728,15 +1745,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               ietf-core-coap-pubsub-13, 20 October 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-core-
               coap-pubsub-13>.
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 31]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [I-D.ietf-dnssd-srp]
               Lemon, T. and S. Cheshire, "Service Registration Protocol
@@ -1773,6 +1781,19 @@ Internet-Draft            IETF Energy Overview             December 2023
               2008, <https://datatracker.ietf.org/doc/html/draft-levis-
               roll-overview-protocols-00>.
 
+
+
+
+
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 32]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [I-D.lhan-problems-requirements-satellite-net]
               Han, L., Li, R., Retana, A., Chen, M., Su, L., Jiang, T.,
               and N. Wang, "Problems and Requirements of Satellite
@@ -1780,19 +1801,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               Draft, draft-lhan-problems-requirements-satellite-net-05,
               5 July 2023, <https://datatracker.ietf.org/doc/html/draft-
               lhan-problems-requirements-satellite-net-05>.
-
-
-
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 32]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [I-D.manral-bmwg-power-usage]
               Manral, V., Sharma, P., Banerjee, S., and Y. Ping,
@@ -1832,23 +1840,21 @@ Internet-Draft            IETF Energy Overview             December 2023
               <https://datatracker.ietf.org/doc/html/draft-petrescu-
               v6ops-ipv6-power-ipv4-00>.
 
+
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 33]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [I-D.rahman-core-sleepy]
               Rahman, A., "Enhanced Sleepy Node Support for CoAP", Work
               in Progress, Internet-Draft, draft-rahman-core-sleepy-05,
               11 February 2014, <https://datatracker.ietf.org/doc/html/
               draft-rahman-core-sleepy-05>.
-
-
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 33]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [I-D.rahman-core-sleepy-nodes-do-we-need]
               Rahman, A., "Sleepy Devices: Do we need to Support them in
@@ -1892,19 +1898,19 @@ Internet-Draft            IETF Energy Overview             December 2023
               2012, <https://datatracker.ietf.org/doc/html/draft-vial-
               core-mirror-proxy-01>.
 
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 34]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [I-D.vial-core-mirror-server]
               Vial, M., "CoRE Mirror Server", Work in Progress,
               Internet-Draft, draft-vial-core-mirror-server-01, 10 April
               2013, <https://datatracker.ietf.org/doc/html/draft-vial-
               core-mirror-server-01>.
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 34]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [I-D.wang-roll-energy-optimization-scheme]
               Wang, H., Wei, M., Li, S., Huang, Q., Wang, P., and C.
@@ -1948,19 +1954,17 @@ Internet-Draft            IETF Energy Overview             December 2023
    [NASPICLOCK]
               Force, N. T. S. T., "Time Synchronization in the Electric
               Power System", March 2017,
-              <https://www.naspi.org/sites/default/files/
-              reference_documents/tstf_electric_power_system_report_pnnl
-              _26331_march_2017_0.pdf>.
 
 
 
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 35]
+Eckert, et al.            Expires 13 June 2024                 [Page 35]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+              <https://www.naspi.org/sites/default/files/
+              reference_documents/tstf_electric_power_system_report_pnnl
+              _26331_march_2017_0.pdf>.
 
    [RFC1112]  Deering, S., "Host extensions for IP multicasting", STD 5,
               RFC 1112, DOI 10.17487/RFC1112, August 1989,
@@ -2003,20 +2007,21 @@ Internet-Draft            IETF Energy Overview             December 2023
               (IPv6) Specification", RFC 2460, DOI 10.17487/RFC2460,
               December 1998, <https://www.rfc-editor.org/rfc/rfc2460>.
 
+
+
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 36]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC2475]  Blake, S., Black, D., Carlson, M., Davies, E., Wang, Z.,
               and W. Weiss, "An Architecture for Differentiated
               Services", RFC 2475, DOI 10.17487/RFC2475, December 1998,
               <https://www.rfc-editor.org/rfc/rfc2475>.
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 36]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC2543]  Handley, M., Schulzrinne, H., Schooler, E., and J.
               Rosenberg, "SIP: Session Initiation Protocol", RFC 2543,
@@ -2060,19 +2065,18 @@ Internet-Draft            IETF Energy Overview             December 2023
               RFC 3977, DOI 10.17487/RFC3977, October 2006,
               <https://www.rfc-editor.org/rfc/rfc3977>.
 
-   [RFC4268]  Chisholm, S. and D. Perkins, "Entity State MIB", RFC 4268,
-              DOI 10.17487/RFC4268, November 2005,
-              <https://www.rfc-editor.org/rfc/rfc4268>.
 
 
 
 
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 37]
+Eckert, et al.            Expires 13 June 2024                 [Page 37]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   [RFC4268]  Chisholm, S. and D. Perkins, "Entity State MIB", RFC 4268,
+              DOI 10.17487/RFC4268, November 2005,
+              <https://www.rfc-editor.org/rfc/rfc4268>.
 
    [RFC4271]  Rekhter, Y., Ed., Li, T., Ed., and S. Hares, Ed., "A
               Border Gateway Protocol 4 (BGP-4)", RFC 4271,
@@ -2117,18 +2121,19 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC5322, October 2008,
               <https://www.rfc-editor.org/rfc/rfc5322>.
 
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 38]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC5548]  Dohler, M., Ed., Watteyne, T., Ed., Winter, T., Ed., and
               D. Barthel, Ed., "Routing Requirements for Urban Low-Power
               and Lossy Networks", RFC 5548, DOI 10.17487/RFC5548, May
               2009, <https://www.rfc-editor.org/rfc/rfc5548>.
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 38]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC5673]  Pister, K., Ed., Thubert, P., Ed., Dwars, S., and T.
               Phinney, "Industrial Routing Requirements in Low-Power and
@@ -2170,21 +2175,22 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC6550, March 2012,
               <https://www.rfc-editor.org/rfc/rfc6550>.
 
+
+
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 39]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC6551]  Vasseur, JP., Ed., Kim, M., Ed., Pister, K., Dejean, N.,
               and D. Barthel, "Routing Metrics Used for Path Calculation
               in Low-Power and Lossy Networks", RFC 6551,
               DOI 10.17487/RFC6551, March 2012,
               <https://www.rfc-editor.org/rfc/rfc6551>.
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 39]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC6552]  Thubert, P., Ed., "Objective Function Zero for the Routing
               Protocol for Low-Power and Lossy Networks (RPL)",
@@ -2228,19 +2234,18 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC6887, April 2013,
               <https://www.rfc-editor.org/rfc/rfc6887>.
 
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 40]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC6933]  Bierman, A., Romascanu, D., Quittek, J., and M.
               Chandramouli, "Entity MIB (Version 4)", RFC 6933,
               DOI 10.17487/RFC6933, May 2013,
               <https://www.rfc-editor.org/rfc/rfc6933>.
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 40]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC6988]  Quittek, J., Ed., Chandramouli, M., Winter, R., Dietz, T.,
               and B. Claise, "Requirements for Energy Management",
@@ -2283,20 +2288,19 @@ Internet-Draft            IETF Energy Overview             December 2023
               Energy", RFC 7460, DOI 10.17487/RFC7460, March 2015,
               <https://www.rfc-editor.org/rfc/rfc7460>.
 
-   [RFC7461]  Parello, J., Claise, B., and M. Chandramouli, "Energy
-              Object Context MIB", RFC 7461, DOI 10.17487/RFC7461, March
-              2015, <https://www.rfc-editor.org/rfc/rfc7461>.
 
 
 
 
 
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 41]
+Eckert, et al.            Expires 13 June 2024                 [Page 41]
 
 Internet-Draft            IETF Energy Overview             December 2023
 
+
+   [RFC7461]  Parello, J., Claise, B., and M. Chandramouli, "Energy
+              Object Context MIB", RFC 7461, DOI 10.17487/RFC7461, March
+              2015, <https://www.rfc-editor.org/rfc/rfc7461>.
 
    [RFC7577]  Quittek, J., Winter, R., and T. Dietz, "Definition of
               Managed Objects for Battery Monitoring", RFC 7577,
@@ -2338,21 +2342,23 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC7772, February 2016,
               <https://www.rfc-editor.org/rfc/rfc7772>.
 
+
+
+
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 42]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC7849]  Binet, D., Boucadair, M., Vizdal, A., Chen, G., Heatley,
               N., Chandler, R., Michaud, D., Lopez, D., and W. Haeffner,
               "An IPv6 Profile for 3GPP Mobile Devices", RFC 7849,
               DOI 10.17487/RFC7849, May 2016,
               <https://www.rfc-editor.org/rfc/rfc7849>.
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 42]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC791]   Postel, J., "Internet Protocol", STD 5, RFC 791,
               DOI 10.17487/RFC0791, September 1981,
@@ -2394,6 +2400,16 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC8200, July 2017,
               <https://www.rfc-editor.org/rfc/rfc8200>.
 
+
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 43]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC822]   Crocker, D., "STANDARD FOR THE FORMAT OF ARPA INTERNET
               TEXT MESSAGES", STD 11, RFC 822, DOI 10.17487/RFC0822,
               August 1982, <https://www.rfc-editor.org/rfc/rfc822>.
@@ -2402,13 +2418,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               "Energy-Efficient Features of Internet of Things
               Protocols", RFC 8352, DOI 10.17487/RFC8352, April 2018,
               <https://www.rfc-editor.org/rfc/rfc8352>.
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 43]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC8368]  Eckert, T., Ed. and M. Behringer, "Using an Autonomic
               Control Plane for Stable Connectivity of Network
@@ -2447,6 +2456,16 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC8724, April 2020,
               <https://www.rfc-editor.org/rfc/rfc8724>.
 
+
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 44]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC8815]  Abrahamsson, M., Chown, T., Giuliano, L., and T. Eckert,
               "Deprecating Any-Source Multicast (ASM) for Interdomain
               Multicast", BCP 229, RFC 8815, DOI 10.17487/RFC8815,
@@ -2457,14 +2476,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               Application Protocol (CoAP)", RFC 8824,
               DOI 10.17487/RFC8824, June 2021,
               <https://www.rfc-editor.org/rfc/rfc8824>.
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 44]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC8928]  Thubert, P., Ed., Sarikaya, B., Sethi, M., and R. Struik,
               "Address-Protected Neighbor Discovery for Low-Power and
@@ -2502,6 +2513,15 @@ Internet-Draft            IETF Energy Overview             December 2023
               RFC 9011, DOI 10.17487/RFC9011, April 2021,
               <https://www.rfc-editor.org/rfc/rfc9011>.
 
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 45]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC9034]  Thomas, L., Anamalamudi, S., Anand, S.V.R., Hegde, M., and
               C. Perkins, "Packet Delivery Deadline Time in the Routing
               Header for IPv6 over Low-Power Wireless Personal Area
@@ -2512,15 +2532,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               Zúñiga, "Multicast Considerations over IEEE 802 Wireless
               Media", RFC 9119, DOI 10.17487/RFC9119, October 2021,
               <https://www.rfc-editor.org/rfc/rfc9119>.
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 45]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    [RFC9139]  Gündoğan, C., Schmidt, T., Wählisch, M., Scherb, C.,
               Marxer, C., and C. Tschudin, "Information-Centric
@@ -2555,6 +2566,18 @@ Internet-Draft            IETF Energy Overview             December 2023
               DOI 10.17487/RFC9271, August 2022,
               <https://www.rfc-editor.org/rfc/rfc9271>.
 
+   [RFC9293]  Eddy, W., Ed., "Transmission Control Protocol (TCP)",
+              STD 7, RFC 9293, DOI 10.17487/RFC9293, August 2022,
+              <https://www.rfc-editor.org/rfc/rfc9293>.
+
+
+
+
+Eckert, et al.            Expires 13 June 2024                 [Page 46]
+
+Internet-Draft            IETF Energy Overview             December 2023
+
+
    [RFC9354]  Hou, J., Liu, B., Hong, Y., Tang, X., and C. Perkins,
               "Transmission of IPv6 Packets over Power Line
               Communication (PLC) Networks", RFC 9354,
@@ -2568,15 +2591,6 @@ Internet-Draft            IETF Energy Overview             December 2023
               S0140366414000620>.
 
 Authors' Addresses
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 46]
-
-Internet-Draft            IETF Energy Overview             December 2023
-
 
    Toerless Eckert (editor)
    Futurewei Technologies USA
@@ -2615,18 +2629,4 @@ Internet-Draft            IETF Energy Overview             December 2023
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Eckert, et al.            Expires 11 June 2024                 [Page 47]
+Eckert, et al.            Expires 13 June 2024                 [Page 47]
