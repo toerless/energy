@@ -354,7 +354,7 @@ to support this scaling.
 
 At the core of scalability, even up to now, is the lightweight per-packet-processing enabled through
 end-to-end congestion loss management architecture as embodied through the IETF "Transmission Control Protocol"
-(TCP, {{RFC793}} and successors, e.g., {{I-D.ietf-tcpm-rfc793bis}}). This model eliminated more expensive per-hop, per-packet processing, such as
+(TCP, {{?RFC9293}}). This model eliminated more expensive per-hop, per-packet processing, such as
 would be required for reliable hop-by-hop forwarding through per-hop ARQ, which was key to scaling routers cost
 effectively.
 
