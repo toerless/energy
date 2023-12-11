@@ -642,7 +642,7 @@ Outside the 6LOWPAN WG, {{RFC9139}} connects Information-Centric Networking (ICN
 
 Since 2014 and before 2023, the "IPv6 over Low Power Wide-Area Networks" (LPWAN) WG has produced 4 RFC
 for low-power wide area networks, such as LoRaWAN {{https://en.wikipedia.org/wiki/LoRa}},
-with three Standards-Track RFC documents, {{RFC8724}}, {{RFC8824}}, {{RFC9011}}.
+with three Standards-Track RFC documents, {{RFC8724}}, {{RFC8824}}, and {{RFC9011}}.
 
 ### 6TISCH WG
 
