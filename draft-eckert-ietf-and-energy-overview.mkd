@@ -288,7 +288,7 @@ the historic timeline in which a specific technology was proposed or introduced.
 IETF technologies will have newer RFC that updates such initial work.
 
 
-This document captures work until 12/2022, at which time the "IAB workshop on Environmental Impact of Internet Applications and Systems" (https://www.iab.org/activities/workshops/e-impact/) created new interest and work in the topic. 
+This document captures work until 12/2022, at which time the "IAB workshop on Environmental Impact of Internet Applications and Systems" {{?I-D.iab-ws-environmental-impacts-report}} revived interest and highlighted the need for some structured activity within the IETF/IRTF. 
 
 
 # Energy Saving: An Introduction
