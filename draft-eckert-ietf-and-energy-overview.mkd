@@ -583,7 +583,7 @@ in air travel.
 
 # Energy Optimization in Specific Networks
 
-## Analysis of routing protocol (in)efficiencies
+## Analysis of Routing Protocol (In)Efficiencies
 
 At the beginning of much of the following IETF efforts was an  
      understanding and analysis that prior protocols for routing and  
