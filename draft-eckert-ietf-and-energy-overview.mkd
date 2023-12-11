@@ -264,7 +264,7 @@ interested in it, in the hope to raise more interest in energy-related
 activities within the IETF, such as identifying gaps and investigating
 solutions as appropriate.
 
-This document captures work until 12/2022, at which time the "IAB workshop on Environmental Impact of Internet Applications and Systems" (https://www.iab.org/activities/workshops/e-impact/) created new interest and work in the topic. 
+This document captures work until 12/2022, at which time the "IAB workshop on Environmental Impact of Internet Applications and Systems" revived interest and triggered new work in the topic within the IETF/IRTF. 
 
 --- middle
 
