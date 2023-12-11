@@ -616,7 +616,7 @@ large packets at low bitrates, packet bundling to only consume radio energy at s
 periods, radio energy tuning to just reach the destination(s), minimization of multicasting
 to eliminate need of radio receivers to consume energy and so on. {{RFC8352}} gives a more detailed
 overview, especially because different L2 technologies such as IEEE 802.15.4 type (low power)
-wireless networks, Bluetooth Low Energy (BLE), Wi-Fi (IEEE 802.11) and DEC ULE. 
+wireless networks, Bluetooth Low Energy (BLE), WLAN (IEEE 802.11) and DEC ULE. 
 
 In the INT area of the IETF, several LLN specific WGs exist(ed):
 
