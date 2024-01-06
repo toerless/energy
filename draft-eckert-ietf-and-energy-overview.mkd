@@ -24,7 +24,7 @@ author:
        street: 2220 Central Expressway
        city: Santa Clara
        code: CA 95050
-       country: USA
+       country: US
        email: tte@cs.fau.de
   -
        name: Mohamed Boucadair
@@ -32,7 +32,7 @@ author:
        org: Orange
        city: Rennes
        code: 35000
-       country: France
+       country: FR
        email: mohamed.boucadair@orange.com
   -
        name: Pascal Thubert
@@ -40,21 +40,23 @@ author:
        street: 45 Allee des Ormes - BP1200, Building D
        city: Sophia Antipolis
        code: 06254 MOUGINS
-       country: France
+       country: FR
        phone: "+33 497 23 26 34"
        email: pthubert@cisco.com
 
   -
        name: Jeff Tentsura
        org: NVIDIA
-       country: USA
+       country: US
        email: jefftant.ietf@gmail.com
 
   -
        name: Carlos Pignataro
+       role: editor
        org: NC State University
-       country: USA
+       country: US
        email: cpignata@gmail.com
+       email: cmpignat@ncsu.edu
 
 
 
@@ -62,7 +64,6 @@ author:
 informative:
   RFC768:
   RFC791:
-  RFC793:
   RFC822:
   RFC1112:
   RFC1142:
@@ -196,7 +197,6 @@ informative:
   I-D.boucadair-irtf-sdn-and-semantic-routing:
   I-D.petrescu-v6ops-ipv6-power-ipv4:
   I-D.lhan-problems-requirements-satellite-net:
-  I-D.ietf-tcpm-rfc793bis:
   I-D.desmouceaux-ipv6-mcast-wifi-power-usage:
   I-D.ietf-roll-protocols-survey:
   I-D.levis-roll-overview-protocols:
@@ -1136,10 +1136,10 @@ enough. Likewise, traditional routers, unlike for example todays standard PC
 hardware designs do exhibit little power savings upon shutdown of components
 such as line-cards or interfaces.
 
-In addition, an SDN / controller-based solution where relatively in
-their infancy back in 2013/2014, and technologies that would allow for SDN controller to
-have resilient (self-healing) connectivity such as described in {{RFC8368}}/{{RFC8994}}
-was also not available, making the risk of severely impacting network
+In addition, an SDN / controller-based solution was relatively in
+its infancy back in 2013/2014, and technologies that would allow for SDN controller to
+have resilient (self-healing) connectivity, such as described in {{RFC8368}} and {{RFC8994}},
+were also not available, making the risk of severely impacting network
 reliability one of the key factors for this PANET work to not proceed so far.
 
 ## SDN-based Semantic Forwarding
@@ -1202,6 +1202,17 @@ it suggests the IETF to work on: "Load-adaptive Resource Management",
 
 Some aspects for those areas of gaps where partially tackled by later work in the IETF, 
 but broadly speaking, most of those areas remain open to a wide range of possible further IETF/IRTF work.
+
+# Security Considerations
+
+This document provides an overview of IETF work related to energy, and as such does not contain security considerations of its own. Each one of the cited documents contains security considerations within its own context.
+
+As the aim of this document is to help those unfamiliar with but interested in IETF energy work, raising awareness of an important broad topic, indirectly also raises awareness of the security considerations overall. And if this document inspires energy-related activities within the IETF, such as identifying gaps and investigating solutions, those would bring their security considerations.
+
+
+# IANA Considerations
+
+This document has no IANA actions.
 
 # Acknowledgments
 
